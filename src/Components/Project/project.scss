@@ -1,9 +1,9 @@
 .project-holder{
-    width: 33%;
     height: 300px;
     border-radius:10px;
     background-color: #011520;
     overflow: hidden;
+    position: relative;
     .img-wrapper{
         height:50%;
         overflow: hidden;
@@ -26,7 +26,7 @@
         color: #ffffff;
         font-size: 17px;
     }
-    position: relative;
+   
     .show-more{
         position: absolute;
         bottom: 0;

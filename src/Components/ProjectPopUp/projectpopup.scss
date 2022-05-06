@@ -1,0 +1,104 @@
+.modal{
+    position: absolute;
+    top: 99vh;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #171717a7;
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .model-container{
+        width: 45%;
+        background-color: #272727;
+        border-radius: 20px;
+        max-height: 90vh;
+        overflow-x: hidden;
+        position: relative;
+        .closeIcon{
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background-color: #171717;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            z-index: 100;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            svg{
+                color: #d7d7d7;
+                font-size: 25px;
+                font-weight: 600;
+                width: 30px;
+                height: 30px;
+            }
+
+        }
+        .img-holder{
+            height: 30%;
+            overflow: hidden;
+            img{
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+                opacity: 0.65;
+            }
+        }
+        .project-details{
+            width: 80%;
+            height: fit-content;
+            padding: 10px;
+            margin: auto;
+            background-color: #171717;
+            border-radius: 20px;
+            position: relative;
+            top: -90px;
+            z-index: 6;
+            .poptitle{
+                padding: 10px auto ;
+                text-align: center;
+                color: #FC3232;
+                font-size: 36px;
+                font-weight: 600;
+                margin-bottom: 10px;
+            }
+            .title{
+                color: #e7e7e7;
+                font-size: 28px;
+                text-align: center;
+                color:#FF8686;
+                margin: 10px auto;
+            }
+            .answer{
+                font-size: 18px;
+                color: #ffffff;
+                padding: 5px 10px;
+            }
+            .skills-container{
+                display: grid;
+                grid-template-columns: repeat(4,20%);
+                grid-gap: 10px;
+                .skill{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin: auto;
+                    img{
+                        width: 50px;
+                        height: 50px;
+                        object-fit: contain;
+                    }
+                    h6{
+                        font-size: 20px;
+                        text-align: center;
+                        color: #ffffff;
+                    }
+                }
+            }
+        }
+    }
+}

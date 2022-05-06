@@ -57,6 +57,7 @@
                 padding: 10px;
                 background-color: #1717174a;
                 border-radius: 10px;
+                grid-template-columns: repeat(3,33%);
                 grid-gap: 5px;
                 transform: translateX(-30px);
             }  

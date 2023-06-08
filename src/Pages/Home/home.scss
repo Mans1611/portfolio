@@ -1,0 +1,17 @@
+.home-page{
+    background-color: #DDFFBB;
+    min-height: calc(100vh - 50px);
+    .home-first-wrapper{
+        display: flex;
+        padding: 50px 0;
+        .half{
+            width: 50%;
+        }
+        .name-typing{
+            background-color: aqua;
+            text-align: center;
+            font-size: 60px;
+
+        }
+    }
+}

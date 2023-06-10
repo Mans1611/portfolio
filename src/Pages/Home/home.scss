@@ -1,17 +1,50 @@
 .home-page{
     background-color: #DDFFBB;
     min-height: calc(100vh - 50px);
+    max-height: fit-content;
     .home-first-wrapper{
         display: flex;
         padding: 50px 0;
+        min-height: 380px;
         .half{
             width: 50%;
         }
         .name-typing{
-            background-color: aqua;
             text-align: center;
             font-size: 60px;
 
         }
+        .pic-background{
+            width: 50%;
+            height: 100%;
+            transform: rotate(45deg);
+            border-radius: 45px;
+            background-color: #FFAE6D;
+            margin: 30px auto 0;
+            border: 3px solid #171717;
+
+        }
+    }
+    .back-dark-box{
+        background-color: #222222c5;
+        position: relative;
+        height: 300px;
+        width: 110%;
+        transform: rotate(10deg) translate(-30px,95px);
+        .tringle{
+            position: absolute;
+            right: -50px;
+            width: 0; 
+            height: 0; 
+            border-style: solid; 
+            border-width: 0 0 230px 230px;
+            transform: rotate(125deg);
+            border-radius: 20px;
+            top: 35px;
+            border-color: transparent transparent #FFAE6D transparent; 
+            }
     }
 }
+// *{
+//     border:2px solid #111
+// }

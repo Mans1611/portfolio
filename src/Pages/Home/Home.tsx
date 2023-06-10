@@ -7,9 +7,16 @@ const Home = () => {
         <div className="home-first-wrapper">
             <NameTyping/>
 
-            <div className="half picture-wrapper"></div>
-        </div>
+            <div className="half picture-wrapper">
+              <div className="pic-background">
+                
+              </div>
+            </div>
 
+        </div>
+        <div className="back-dark-box">
+         <div className="tringle"></div>
+        </div>
     </div>
   )
 }

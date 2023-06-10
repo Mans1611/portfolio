@@ -1,11 +1,20 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import './navbar.scss'
 import { Link, Outlet } from 'react-router-dom'
-
+import {Menu} from '@mui/icons-material';
+import SideBar from '../SideBar/SideBar';
+import { appContext } from '../../App';
+import LightModeIcon from '@mui/icons-material/LightMode';
+import NightlightIcon from '@mui/icons-material/Nightlight';
 const NavBar = () => {
   const [selctedLink,setSelectedLink] = useState("Home");
+  const [showSidebar,setShowSidebar] = useState(false);
   
-  
+  const {
+    dark,
+    setDark
+  } = useContext(appContext);
+
   const moveHover = (e: any)=>{
       const activeBox: (HTMLElement | null) = document.getElementById('active');
       let linksList = document.getElementsByClassName('nav-links-container')[0].children
@@ -30,10 +39,7 @@ const NavBar = () => {
     
     
     
-    type dim = {
-      width : string ,
-      height : string,
-    }
+  
 
     useEffect(()=>{
       const activeBox: (HTMLElement | null) = document.getElementById('active');
@@ -41,14 +47,12 @@ const NavBar = () => {
       
     if(activeBox?.style){
       //@ts-ignore
-      if(activeBox.style != undefined || linksList[0].getBoundingClientRect()?.width != undefined){
+      if(activeBox.style !== undefined || linksList[0].getBoundingClientRect()?.width !== undefined){
         
         activeBox.style.width  = (linksList[1].getBoundingClientRect().width as never) as string + 'px'
         //console.log(((linksList[0].getClientRects() as never) as dim).width)
         activeBox.style.height = (linksList[1].getBoundingClientRect().height as never) as string + 'px'
-        console.log(activeBox.style)
-        console.log((linksList[1].getBoundingClientRect().height as never) as string) 
-      
+        
       }
       }
   },[])
@@ -67,9 +71,16 @@ const NavBar = () => {
                 <Link onClick={()=>setSelectedLink("About")} className={`link ${selctedLink === 'About'? 'activelink' : ''}`} to='about'>About</Link>
                 <Link onClick={()=>setSelectedLink("Contact")} className={`link ${selctedLink === 'Contact'? 'activelink' : ''}`} to='contact'>Contact</Link>
             </div>
+                <div onClick={()=>(setDark(!dark) ) } className="theme-wrapper">
+                  {dark?<NightlightIcon/>:<LightModeIcon/>}
+              </div>
+        </div>
+        <div className="burger-wrapper">
+          <Menu onClick={()=>setShowSidebar(true)}/>
         </div>
     </div>
     <Outlet/>
+    {showSidebar && <SideBar setShowSidebar = {setShowSidebar}/>}
     </>
   )
 }

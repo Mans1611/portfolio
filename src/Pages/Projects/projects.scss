@@ -1,0 +1,32 @@
+.page{
+    .projectPage{
+        height: calc(100vh - 50px);
+    }
+    background-color: #DDFFBB;
+    min-height: calc(100vh - 50px);
+    max-height: fit-content;
+    &.dark{
+        background-color: #011520;
+        .page-title{
+            color: #f1ffe3;
+        }
+    }
+    .page-title{
+        padding: 20px;
+        text-align: center;
+        h1{
+            font-size: 80px;
+        }
+    }
+    .projects-cards-container{
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        margin: auto;
+      
+    }
+    .projects-container{
+        background-color: aqua;
+        height: 100vh;
+    }
+}

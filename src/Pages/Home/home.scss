@@ -2,6 +2,18 @@
     background-color: #DDFFBB;
     min-height: calc(100vh - 50px);
     max-height: fit-content;
+    &.dark{
+        background-color: #011520;
+        .name-typing{
+            color:#ffffff
+        }
+        .home-first-wrapper{
+            .pic-background{
+                background-color: #272727b3;
+            }
+        }
+
+    }
     .home-first-wrapper{
         display: flex;
         padding: 50px 0;
@@ -15,14 +27,24 @@
 
         }
         .pic-background{
-            width: 50%;
-            height: 100%;
+            width: 300px;
+            height: 300px;
             transform: rotate(45deg);
             border-radius: 45px;
             background-color: #FFAE6D;
             margin: 30px auto 0;
             border: 3px solid #171717;
-
+            display: flex;
+            align-items: center;
+            justify-content: center;   
+            overflow: hidden;
+        }
+        .my_photo{
+            transform: rotate(-45deg);
+            width: 75%;
+            height: 95%;
+            border-radius: 10px;
+            
         }
     }
     .back-dark-box{
@@ -30,8 +52,17 @@
         position: relative;
         height: 300px;
         width: 110%;
-        transform: rotate(10deg) translate(-30px,95px);
+        transform: rotate(10deg) translate(-30px,20px);
+        .tasks{
+            transform: rotate(-10deg) translate(-30px,95px);
+            color: #ffffff;
+            position: absolute;
+            left: 120px;
+            font-size: 30px;
+            top: -40px;
+        }
         .tringle{
+            display: none;
             position: absolute;
             right: -50px;
             width: 0; 
@@ -45,6 +76,7 @@
             }
     }
 }
+
 // *{
 //     border:2px solid #111
 // }

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css';
 import NavBar from './Components/NavBar/NavBar';
 import Home from './Pages/Home/Home';
+import Projects from './Pages/Projects/Projects';
 export interface props {
   dark : boolean | string| null,
   setDark : React.Dispatch<React.SetStateAction<boolean>>
@@ -25,7 +26,7 @@ function App() {
           <Routes>
           <Route path="/" element={<NavBar/>}>
             <Route index path='home' element={<Home/>}></Route>  
-            <Route path='projects'></Route>  
+            <Route path='projects' element={<Projects/>}></Route>  
             <Route path='about'></Route>  
             <Route path='contact'></Route>  
           

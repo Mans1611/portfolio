@@ -61,7 +61,7 @@ const NavBar = () => {
 
   return (
     <>
-    <div className='navbar'>
+    <div className={`navbar ${dark? 'dark':''}`}>
         <div id="left-side-navbar"></div>
         <div id="right-side-navbar">
             <div onClick={(e)=>moveHover(e)} className="nav-links-container">

@@ -28,8 +28,7 @@ const ProjectCard = (
         },0)
     }
     const handleprojectClick = ()=>{
-        setActiveCard({backgroundColor,id})
-       
+        setActiveCard({backgroundColor,id});
         scroll();
     }
   return (

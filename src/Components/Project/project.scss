@@ -1,0 +1,45 @@
+.project-holder{
+    width: 33%;
+    height: 300px;
+    border-radius:10px;
+    background-color: #011520;
+    overflow: hidden;
+    .img-wrapper{
+        height:50%;
+        overflow: hidden;
+        .project-img{
+            width: 105%;
+            opacity: 0.75;
+            transform: translateY(-10px);
+        }
+    }
+    .project-title{
+        margin-top: 5px;
+        h2{
+            color: #DA3653;
+            font-size: 26px;
+            text-align: center;
+        }
+    }
+    .project-description{
+        padding: 5px;
+        color: #ffffff;
+        font-size: 17px;
+    }
+    position: relative;
+    .show-more{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        border-top: 2px solid #ffffff;
+        button{
+            cursor: pointer;
+            width: 100%;
+            border: none;
+            padding: 5px;
+            font-size: 30px;
+            background-color: #173241;
+            color: #D1DA36;
+        }
+    }
+}

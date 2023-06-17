@@ -38,7 +38,9 @@ const Projects = () => {
                          workingFields.map((field,index)=>
                          <FieldPage 
                             field = {field}
-                            index = {index}/>
+                            index = {index}
+                            projects={field.projects}
+                            />
                     )
                 }
                 </div>

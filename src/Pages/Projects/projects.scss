@@ -34,7 +34,7 @@
         
         .projects-container{
             position: absolute;
-            height: 90%;
+            height: 100%;
             width: 100%;
             margin: auto 0;
             border-radius: 20px;
@@ -48,6 +48,18 @@
                 cursor: pointer;
                 transform: rotate(-90deg);
             }
+            .projects-grid{
+                display: grid;
+                background-color: #171717;
+                width: 80%;
+                min-height: 300px;
+                margin: 30px auto ;
+                padding: 10px;
+                background-color: #1717174a;
+                border-radius: 10px;
+                grid-gap: 5px;
+                transform: translateX(-30px);
+            }  
 
         }
     }  

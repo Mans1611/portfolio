@@ -1,7 +1,23 @@
 import ux from '../assets/ux.png'
 import data from '../assets/data.png'
 import web from '../assets/development.png'
+import react from '../assets/react.png'
+import redux from '../assets/redux.png'
+import express from '../assets/express.png'
+import sql from '../assets/sql.png'
+import typescript from '../assets/typescript.png'
+import node from '../assets/node.png'
+import messi from '../assets/messi.jpeg'
 
+
+export interface projectInterface {
+    title:string,
+    skills : {skillsName:string,icon:string}[],
+    description : string,
+    link : {repo: boolean, link : string},
+    teamWork : boolean,
+    projectImg:string
+}
 
 export interface feildsInterface{
     title : string,
@@ -9,9 +25,8 @@ export interface feildsInterface{
     backgroundColor:string,
     id:string,
     img:string,
-    
+    projects : projectInterface[]
 }
-
 export const workingFields:feildsInterface[] = [
     {
         title:"UI/UX Design",
@@ -22,8 +37,26 @@ export const workingFields:feildsInterface[] = [
         ],
         backgroundColor : "#FC4545",
         id:"design",
-        img:ux
+        img:ux,
+        projects : [
+            {
+                title:"Expect (FIFA World Cup Game)",
+                link : {repo:true,link:""},
+
+                skills : [
+                    {skillsName:"Node.JS",icon:node},
+                    {skillsName:"Express.JS",icon:express},
+                    {skillsName:"React.JS",icon:react},
+                    {skillsName:"Redux.JS",icon:redux},
+                    {skillsName:"Mongo.JS",icon:""},
+                ],
+                projectImg : messi,
+                description :"Virtual Game like Fantasy Premire League, but it was meant for World Cup in 2022, the game is expection game, you expect  match winner, the result of that game and finally your star players.Depends on your Expection you collect points and you compete with your friends and all other players. You can create a team of 5 players and compete with other teams, your team's points will be gathered for all the players.",
+                teamWork : false
+            }
+        ]
     },
+
     {
         title:"Full Stack Web",
         description : [
@@ -33,7 +66,24 @@ export const workingFields:feildsInterface[] = [
         ],
         backgroundColor : "#D1DA36",
         id:"web",
-        img:web
+        img:web,
+        projects : [
+            {
+                title:"Expect (FIFA World Cup Game)",
+                link : {repo:true,link:""},
+
+                skills : [
+                    {skillsName:"Node.JS",icon:node},
+                    {skillsName:"Express.JS",icon:express},
+                    {skillsName:"React.JS",icon:react},
+                    {skillsName:"Redux.JS",icon:redux},
+                    {skillsName:"Mongo.JS",icon:""},
+                ],
+                projectImg : messi,
+                description :"Virtual Game like Fantasy Premire League, but it was meant for World Cup in 2022, the game is expection game, you expect  match winner, the result of that game and finally your star players.Depends on your Expection you collect points and you compete with your friends and all other players. You can create a team of 5 players and compete with other teams, your team's points will be gathered for all the players.",
+                teamWork : false
+            }
+        ]
     },
     {
         title:"Data Science",
@@ -45,6 +95,9 @@ export const workingFields:feildsInterface[] = [
         ],
         backgroundColor : "#439F4C",
         id:"data",
-        img:data
+        img:data,
+        projects : [
+
+        ]
     },
 ]

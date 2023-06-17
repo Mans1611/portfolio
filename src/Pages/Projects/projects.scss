@@ -20,13 +20,39 @@
     }
     .projects-cards-container{
         display: flex;
-        justify-content: space-between;
+        justify-content: space-between ;
         width: 90%;
-        margin: auto;
+        margin: 20px auto;
+        
       
     }
-    .projects-container{
-        background-color: aqua;
+
+    .projects-wrapper{
+        position: relative;
+        overflow-x: hidden;
         height: 100vh;
-    }
+        
+        .projects-container{
+            position: absolute;
+            height: 90%;
+            width: 100%;
+            margin: auto 0;
+            border-radius: 20px;
+            display: flex;
+            transition: all 300ms;
+            .side-name{
+                flex: 1;
+                position: absolute;
+                font-size: 28px;
+                left: -35px;
+                cursor: pointer;
+                transform: rotate(-90deg);
+            }
+
+        }
+    }  
+   
+        
+    
+    
 }

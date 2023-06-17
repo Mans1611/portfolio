@@ -3,6 +3,7 @@ import ux from '../../assets/ux.png'
 import './projectcard.scss';
 import { appContext } from '../../App';
 import { feildsInterface } from '../../data/projectList';
+import { translateShow } from '../../utilis/transferShow';
 
 const ProjectCard = (
     {title,description,backgroundColor,id,img,activeCard,setActiveCard}
@@ -21,13 +22,18 @@ const ProjectCard = (
     const scroll = ()=>{
         // this function when click on any field it will scroll the page to the section.
         setTimeout(()=>{
-            const section = document.getElementById('project-show');
+            const section = document.getElementsByClassName('project-show')[0];
             section?.scrollIntoView({behavior:'smooth'})
+            translateShow(id);
         },0)
     }
-
+    const handleprojectClick = ()=>{
+        setActiveCard({backgroundColor,id})
+       
+        scroll();
+    }
   return (
-        <div onClick={()=>{scroll();setActiveCard({backgroundColor,id})}} 
+        <div onClick={handleprojectClick}
              style={{backgroundColor:backgroundColor}} 
              className={`project-card ${dark?'dark':''} ${activeCard.id===id?'activeCard':''}`}>
             <div className="title">
@@ -39,6 +45,7 @@ const ProjectCard = (
             <div className="img-container">
                 <img className='img-background' src={img}/>
             </div>
+            <div className="white-shiny"></div>
         </div>
   )
 }

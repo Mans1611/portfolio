@@ -58,7 +58,6 @@
         .title{
             h2{
                 font-size: 52px;
-               
             }
         }
         .description{
@@ -78,4 +77,25 @@
             }
         }
        }
+    .white-shiny{
+        position: absolute;
+        z-index: 12;
+        height:2px;
+        border-radius: 20%;
+        background-color: #ffffffa3;
+        top: 180px;
+        width: 160%;
+        animation: shinny 5500ms linear backwards infinite;
+       //  transform: translate(-60%, 0%) rotate(45deg);
+        // transform: translate(40%, 0%)  rotate(45deg);
+
+    }
+}
+@keyframes shinny {
+    from{
+        transform: translate(-70%, 0%) rotate(45deg) ;
+    }to{
+        transform: translate(60%, 0%) rotate(45deg);
+
+    }
 }

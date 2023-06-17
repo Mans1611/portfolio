@@ -3,6 +3,8 @@ import { appContext } from '../../App';
 import './projects.scss';
 import ProjectCard from '../../Components/ProjectCard/ProjectCard';
 import { workingFields } from '../../data/projectList';
+import { transform } from 'typescript';
+import FieldPage from '../../Components/ProjectField/FieldPage';
 
 const Projects = () => {
     const {dark} = useContext(appContext);
@@ -31,9 +33,16 @@ const Projects = () => {
         </div>
         </div>
             { activeCard.id !== '' &&
-                <div id='project-show' style={{backgroundColor : activeCard.backgroundColor}} className="projects-container">
-
+                <div className="projects-wrapper">
+                    {
+                         workingFields.map((field,index)=>
+                         <FieldPage 
+                            field = {field}
+                            index = {index}/>
+                    )
+                }
                 </div>
+                
             }
         
     </div>

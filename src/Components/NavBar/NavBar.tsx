@@ -7,13 +7,14 @@ import { appContext } from '../../App';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import NightlightIcon from '@mui/icons-material/Nightlight';
 const NavBar = () => {
-  const [selctedLink,setSelectedLink] = useState("Home");
+  
   const [showSidebar,setShowSidebar] = useState(false);
   
   const {
-    dark,
-    setDark
+    dark, setDark,
+    selctedLink,setSelectedLink
   } = useContext(appContext);
+  
 
   const moveHover = (e: any)=>{
       const activeBox: (HTMLElement | null) = document.getElementById('active');
@@ -57,6 +58,12 @@ const NavBar = () => {
       }
   },[])
 
+    const handleShowSideBar = ()=>{
+      setShowSidebar(true);
+      const app = document.getElementsByTagName('body')[0]
+      if(app?.style)
+          app.style.overflow = 'hidden' 
+    }
 
 
   return (
@@ -76,11 +83,12 @@ const NavBar = () => {
               </div>
         </div>
         <div className="burger-wrapper">
-          <Menu onClick={()=>setShowSidebar(true)}/>
+          <Menu onClick={handleShowSideBar}/>
         </div>
     </div>
     <Outlet/>
-    {showSidebar && <SideBar setShowSidebar = {setShowSidebar}/>}
+    {showSidebar && <SideBar  
+                    setShowSidebar = {setShowSidebar}/>}
     </>
   )
 }

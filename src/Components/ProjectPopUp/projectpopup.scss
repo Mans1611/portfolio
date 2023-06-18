@@ -1,6 +1,6 @@
 .modal{
     position: absolute;
-    top: 99vh;
+    top: 0;
     right: 0;
     left: 0;
     bottom: 0;
@@ -100,5 +100,12 @@
                 }
             }
         }
+    }
+
+    @media screen and (max-width:560px) {
+        .model-container{
+            width: 85%;
+        }
+        
     }
 }

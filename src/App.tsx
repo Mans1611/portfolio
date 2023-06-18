@@ -10,15 +10,19 @@ import { projectInterface } from './data/projectList';
 export interface props {
   dark : boolean | string| null,
   setDark : React.Dispatch<React.SetStateAction<boolean>>,
-  projectPop : {show:boolean,project:object},
-  setProjectPop:React.Dispatch<React.SetStateAction<{show:boolean,project:{}}>>,
+  projectPop : {show:boolean,project:object,top:number},
+  setProjectPop:React.Dispatch<React.SetStateAction<{show:boolean,project:{},top:number}>>,
+  selctedLink:string,
+  setSelectedLink: React.Dispatch<React.SetStateAction<string>>
   innerWidth : number
 }
 
 const obj:props = {
   dark:null,setDark:()=>{},
-  projectPop : {show:false,project:{}},
+  projectPop : {show:false,project:{},top:window.scrollY},
   setProjectPop : ()=>{},
+  selctedLink: "",
+  setSelectedLink:()=>{},
   innerWidth : window.innerWidth
 }
 export const appContext = createContext(obj);
@@ -27,14 +31,24 @@ export const appContext = createContext(obj);
 
 function App() {
   const [dark,setDark] = useState(false);
-  const [projectPop,setProjectPop] = useState({show:false,project:{}});
+  const [projectPop,setProjectPop] = useState({show:false,project:{},top:window.scrollY});
   const [innerWidth] = useState(window.innerWidth)
+  const [selctedLink,setSelectedLink] = useState("Home");
+
+  const activeLink = window.location.href.split("/")[0];
+  
+  const linksList = ['home','projects','about','contact'];
+  
+  if(linksList.includes(activeLink))
+    setSelectedLink(activeLink)
+  
 
   return (
     <Router>
       <appContext.Provider value={{
         dark,setDark,
         projectPop,setProjectPop,
+        selctedLink,setSelectedLink,
         innerWidth
       }}>
 

@@ -12,8 +12,7 @@ const FieldPage = ({index,field,projects} :
     }) => {
         
     const {innerWidth} = useContext(appContext);
-    console.log(index)
-    console.log(typeof(index))
+    
     return (
     <div id={`${field.id}-projects`} style={{zIndex:index+5,
         transform:`${innerWidth > 560 ? `translateX(${index * 50}px` : `translateY(${index * 50}px`})`,

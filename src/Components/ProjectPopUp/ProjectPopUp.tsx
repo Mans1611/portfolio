@@ -5,16 +5,24 @@ import CloseIcon from '@mui/icons-material/Close';
 import { appContext } from '../../App';
 import Skill from '../Skill/Skill';
 const ProjectPopUp = ({project}:{project:projectInterface}) => {
+    
 
-    const {setProjectPop} = useContext(appContext);
+    const {projectPop,setProjectPop} = useContext(appContext);
     const handleClose = ()=>{
-        setProjectPop({show:false,project:{}});
+        setProjectPop({show:false,project:{},top:window.scrollY});
         const app = document.getElementsByTagName('body')[0]
         if(app?.style)
             app.style.overflow = 'auto' 
     }
+
+    
+    const close = (e: EventTarget ) :void=>{
+        if(( (e as HTMLElement).classList.contains('modal')))  
+            handleClose();
+    }
+    
   return (
-    <div className='modal'>
+    <div style={{top:projectPop.top}} onClick={(e)=>close(e.target)} className='modal'>
         <div className="model-container">
             <div onClick={handleClose} className="closeIcon">
                 <CloseIcon/>
@@ -29,7 +37,7 @@ const ProjectPopUp = ({project}:{project:projectInterface}) => {
                 <p className='answer'>{project.description}</p>
                 <h2 className="title">Skills</h2>
                 <div className="skills-container">
-                    {project.skills.map((skill,key)=><Skill skill={skill}/>)}
+                    {project.skills.map((skill,key)=><Skill skill={skill} key={key}/>)}
                 </div>
             </div>
         </div>

@@ -90,9 +90,9 @@
 
 .sidebar-container{
     position: absolute;
-    width: 90%;
+    width: 80%;
     height: 100vh;
-    background-color: #272727;
+    background-color: #e3c670fb;
     z-index: 999;
     top: 0;
     right: -90%;
@@ -101,6 +101,74 @@
     border-bottom-left-radius: 20px;
     transition: all 300ms;
     animation: apper 150ms linear forwards;
+    .backicon{
+        svg{
+            color: #ffffff;
+            width: 45px;
+            height: 45px;
+        }
+    }
+    .protofolio-title{
+        margin: 30px auto ;
+        font-size: 25px;
+        color: #e7e7e7;
+        font-weight: 700;
+        text-align: center;
+    }
+    .links-container{
+
+        .link-item{
+            text-align: center;
+            margin: 20px auto;
+            a,.theme{
+                color: #ffffff;
+                text-decoration: none;
+                font-size: 30px;
+                font-weight: 500;
+            }
+            svg{
+                margin-left: 10px;
+                width: 30px;
+                height: 30px;
+                color: #ffffff;
+            }
+            &.theme-wrapper{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-left: 20px;
+            }
+
+            
+            &.selected-link{
+                background-color: #FBF2CF;
+                width: 90%;
+                padding: 10px;
+                border-radius: 10px;
+                a{
+                    color:#171717 ;
+                    font-size: 35px;
+                }
+            }
+        }
+    }
+    
+    &.dark{
+        background-color: #052D43;
+        .protofolio-title{
+            color: #FFD700;
+        }
+        .links-container{
+            .link-item{
+                &.selected-link{
+                    background-color: #171717b6;
+                    a{
+                        color:#d9c240 ;
+                    }
+                }
+            }
+        }
+    }
 }
 @keyframes apper{
     to{

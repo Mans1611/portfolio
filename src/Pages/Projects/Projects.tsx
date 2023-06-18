@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { appContext } from '../../App';
 import './projects.scss';
 import ProjectCard from '../../Components/ProjectCard/ProjectCard';
@@ -10,7 +10,8 @@ const Projects = () => {
     const {dark} = useContext(appContext);
 
     const [activeCard,setActiveCard] = useState({id:"",backgroundColor:""});
-
+   
+    
 
   return (
     <div className={`page ${dark?'dark':''}`}>

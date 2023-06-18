@@ -28,6 +28,7 @@ const Projects = () => {
                             img={field.img}
                             activeCard = {activeCard}
                             setActiveCard={setActiveCard}
+                            key={id}
                 />)
             }
         </div>

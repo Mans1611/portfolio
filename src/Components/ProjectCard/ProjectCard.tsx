@@ -17,14 +17,14 @@ const ProjectCard = (
         setActiveCard : React.Dispatch<React.SetStateAction<{backgroundColor:string,id:string}>>
     }) => {
 
-    const {dark} = useContext(appContext);
+    const {dark,innerWidth} = useContext(appContext);
 
     const scroll = ()=>{
         // this function when click on any field it will scroll the page to the section.
         setTimeout(()=>{
             const section = document.getElementsByClassName('project-show')[0];
             section?.scrollIntoView({behavior:'smooth'})
-            translateShow(id);
+            translateShow(id,innerWidth);
         },0)
     }
     const handleprojectClick = ()=>{

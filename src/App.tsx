@@ -11,26 +11,31 @@ export interface props {
   dark : boolean | string| null,
   setDark : React.Dispatch<React.SetStateAction<boolean>>,
   projectPop : {show:boolean,project:object},
-  setProjectPop:React.Dispatch<React.SetStateAction<{show:boolean,project:{}}>>
+  setProjectPop:React.Dispatch<React.SetStateAction<{show:boolean,project:{}}>>,
+  innerWidth : number
 }
 
 const obj:props = {
   dark:null,setDark:()=>{},
   projectPop : {show:false,project:{}},
-  setProjectPop : ()=>{}
+  setProjectPop : ()=>{},
+  innerWidth : window.innerWidth
 }
 export const appContext = createContext(obj);
+
 
 
 function App() {
   const [dark,setDark] = useState(false);
   const [projectPop,setProjectPop] = useState({show:false,project:{}});
-  
+  const [innerWidth] = useState(window.innerWidth)
+
   return (
     <Router>
       <appContext.Provider value={{
         dark,setDark,
-        projectPop,setProjectPop
+        projectPop,setProjectPop,
+        innerWidth
       }}>
 
         <div id='app' className="App">

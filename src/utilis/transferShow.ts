@@ -1,30 +1,47 @@
-export const translateShow = (id:string):void=>{
+export const translateShow = (id:string,width:number):void=>{
     const web = document.getElementById('web-projects');
     const data = document.getElementById('data-projects');
     const design = document.getElementById('design-projects');
 
-    switch (id) {
-        case "web":
+
+    
+        if (id ===  "web" && width > 560 ){
             if(data?.style !== undefined && web?.style !==undefined ){
                 data.style.transform = 'translateX(95%)';
-                web.style.transform = 'translateX(4%)';
+                web.style.transform = 'translateX(50px)';
             }
-            break;
-            case "data":
-                if(data?.style !== undefined && web?.style !==undefined){
-                    web.style.transform = 'translateX(4%)';
-                    data.style.transform = 'translateX(8%)';
-                }
-                break;
-            case "design":
-                if(data?.style !== undefined && web?.style !==undefined){
-                    data.style.transform = 'translateX(95%)';
-                    web.style.transform = 'translateX(90%)';
+        }
+        else if( id === "data" && width > 560 ){
+            if(data?.style !== undefined && web?.style !==undefined){
+                web.style.transform = 'translateX(50px)';
+                data.style.transform = 'translateX(100px)';
             }
-            break;
+        }
+        else if(id === "design" && width > 560  ){
+               if(data?.style !== undefined && web?.style !==undefined){
+                   data.style.transform = 'translateX(95%)';
+                   web.style.transform = 'translateX(90%)';
+           }
+        }
+        else if (id ===  "web" && width <= 560 ){
+            if(data?.style !== undefined && web?.style !==undefined ){
+                data.style.transform = 'translateY(90%)';
+                web.style.transform = 'translateY(50px)';
+            }
+        }
+        else if( id === "data" && width <= 560 ){
+            if(data?.style !== undefined && web?.style !==undefined){
+                web.style.transform = 'translateY(50px)';
+                data.style.transform = 'translateY(100px)';
+            }
+        }
+        else if(id === "design" && width <= 560  ){
+               if(data?.style !== undefined && web?.style !==undefined){
+                   data.style.transform = 'translateY(90%)';
+                   web.style.transform = 'translateY(81%)';
+           }
+        }
        
 
-        default:
-            break;
-    }
+    
 }

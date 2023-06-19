@@ -1,0 +1,114 @@
+$web-color : #d1da36;
+$data-color :#439f4c ;
+$design-color : #fc4545 ;
+
+
+.home-details{
+    width: 90%;
+    border-radius: 10px;
+    background-color: #dfb99b3e;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+    height: fit-content;
+    margin-left: 5px ;
+    .info-holder{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        .number{
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 60px;
+        }
+        .info-title{
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 60px;
+        }
+        #experince{
+            width: 30%;
+            h1{
+                margin: auto;
+                padding: 5px 10px;
+                background-color: #323232;
+                border-radius: 30%;
+                width: 100px;
+                height: 80px;
+            }
+            h3{
+                color: #323232;
+                font-size: 32px;
+            }
+        }
+        #projects{
+            width: 30%;
+            h1{
+                padding: 5px 10px;
+                background-color: #FC4545;
+                border-radius: 30%;
+                margin: auto;
+                width: 100px;
+                height: 80px;
+               
+            }
+            h3{
+                color: #FC4545;
+                font-size: 32px;
+            }
+        }
+    }
+    .circle{
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        position: absolute;
+        z-index: 9;
+        &#right{
+            right: -50px;
+            top: -50px;
+            background-color: #FC4545;
+        }
+        &#left{
+            background-color: #323232;
+            bottom: -50px;
+            left: -50px;
+        }
+        &#left-bottom{
+            top: -50px;
+            left: -50px;
+            background-color: #FC4545;
+
+        }
+    }
+
+    .skills-title{
+        color: #FC4545;
+        font-size: 42px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .skill-grid{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .skill-tag{
+        padding: 5px 10px;
+        border-radius: 15px;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 600;
+        background-color: #ffffff;
+        margin: 2px;
+        &.web{
+            border: 2px solid $web-color;
+        }
+        &.data{
+            border: 2px solid $data-color;
+        }
+        &.design{
+            border: 2px solid $design-color;
+        }
+    }
+}

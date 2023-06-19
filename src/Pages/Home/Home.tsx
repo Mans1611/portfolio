@@ -4,6 +4,8 @@ import NameTyping from '../../Components/NameTyping/NameTyping'
 import Mans from '../../assets/Mans.jpeg';
 import { appContext } from '../../App';
 import HomeProjects from '../../Components/HomeProjects/HomeProjects';
+import NumberedInfo from '../../Components/NumberedInfo/NumberedInfo';
+import SkillsSection from '../../Components/Skill/SkillsSection';
 
 const Home = () => {
   const {
@@ -13,26 +15,19 @@ const Home = () => {
     <div className={`home-page ${dark?'dark':''}`}>
         <div className="home-first-wrapper">
             <NameTyping/>
-            <div className="half picture-wrapper">
+            <div className="picture-wrapper">
               <div className="pic-background">
                 <img className='my_photo' src={Mans}/>
               </div>
             </div>
 
         </div>
-        <div className="back-dark-box">
-          <div className="tasks">
-              Here I Can:
-              <ul>
-                <li>Create You Web Appliaction.</li>
-                <li>Create Rest API.</li>
-                <li>Analysis your Data.</li>
-                <li>Build Machine Learning to predict future analysis.</li>
-              </ul>
-          </div> 
-         <div className="tringle"></div>
+
+        <div className="details-holder">
+          <NumberedInfo/>
+          <SkillsSection/>
         </div>
-        <HomeProjects/>
+       
     </div>
   )
 }

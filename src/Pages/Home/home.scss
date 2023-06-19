@@ -1,3 +1,5 @@
+
+
 .home-page{
     background-color: #DDFFBB;
     min-height: calc(100vh - 50px);
@@ -5,7 +7,8 @@
     &.dark{
         background-color: #011520;
         .name-typing{
-            color:#ffffff
+            background-color: rgb(36 41 46);
+            color: #e5e5e5;
         }
         .home-first-wrapper{
             .pic-background{
@@ -23,25 +26,37 @@
         }
         .name-typing{
             text-align: center;
-            font-size: 60px;
+            font-size: 52px;
+           
+            border-radius: 10px;
+            color:#171717;
+            background-color: #ffffffbe;
+            margin: auto;
+            flex: 7;
+            margin-left: 20px;
+            animation : slidedown forwards 150ms linear;
+
             .code{
                 color: #FC4545;
-                font-size: 68px;
+                font-size: 60px;
                 font-weight: 600;
             }
             #myname{
                 font-weight: 600;
                 color: #FFD700;
-                font-size: 65px;
+                font-size: 56px;
             }
 
         }
+        .picture-wrapper{
+            flex: 5;
+        }
         .pic-background{
-            width: 300px;
-            height: 300px;
+            width: 240px;
+            height: 240px;
             transform: rotate(45deg);
             border-radius: 45px;
-            background-color: #FFAE6D;
+            background-color: #181f4b;
             margin: 30px auto 0;
             border: 3px solid #171717;
             display: flex;
@@ -50,9 +65,9 @@
             overflow: hidden;
         }
         .my_photo{
-            transform: rotate(-45deg);
-            width: 75%;
-            height: 95%;
+            transform: rotate(-45deg) translateY(20px);
+            width: 85%;
+            height: 100%;
             border-radius: 10px;
             
         }
@@ -85,6 +100,11 @@
             border-color: transparent transparent #FFAE6D transparent; 
             }
     }
+    .details-holder{
+        display: grid;
+        min-height: 200px;
+        grid-template-columns: 60% 40%;
+    }
 
     @media screen and (max-width:560px) {
         .home-first-wrapper{
@@ -104,6 +124,7 @@
                 background-color: transparent !important; 
                 margin: 30px auto 0;
                 border: none;
+                flex: 5;
                 
             }
             
@@ -123,7 +144,14 @@
         }    
     }
 }
-
+@keyframes slidedown {
+    from {
+        height: 0;
+    }to{
+        height: fit-content;
+        padding: 5px;
+    }
+}
 // *{
 //     border:2px solid #111
 // }

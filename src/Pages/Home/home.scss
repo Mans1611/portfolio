@@ -24,6 +24,16 @@
         .name-typing{
             text-align: center;
             font-size: 60px;
+            .code{
+                color: #FC4545;
+                font-size: 68px;
+                font-weight: 600;
+            }
+            #myname{
+                font-weight: 600;
+                color: #FFD700;
+                font-size: 65px;
+            }
 
         }
         .pic-background{
@@ -74,6 +84,43 @@
             top: 35px;
             border-color: transparent transparent #FFAE6D transparent; 
             }
+    }
+
+    @media screen and (max-width:560px) {
+        .home-first-wrapper{
+            display: initial;
+            padding: 50px 0;
+            min-height: 380px;
+            display: flex;
+            flex-direction: column;
+            .half{
+                width: initial;
+                &.picture-wrapper{
+                    order: 1;
+                }
+            }
+            .pic-background{
+                
+                background-color: transparent !important; 
+                margin: 30px auto 0;
+                border: none;
+                
+            }
+            
+            .name-typing{
+                order: 2;
+                text-align: center;
+                font-size: 45px;
+                .code{
+                    color: #FC4545;
+                    font-size: 55px;
+                }
+                #myname{
+                    color: #FFD700;
+                    font-size: 50px;
+                }
+            }
+        }    
     }
 }
 

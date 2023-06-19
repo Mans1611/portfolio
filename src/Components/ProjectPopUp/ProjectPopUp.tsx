@@ -4,6 +4,7 @@ import './projectpopup.scss';
 import CloseIcon from '@mui/icons-material/Close';
 import { appContext } from '../../App';
 import Skill from '../Skill/Skill';
+import { Link } from 'react-router-dom';
 const ProjectPopUp = ({project}:{project:projectInterface}) => {
     
 
@@ -39,6 +40,11 @@ const ProjectPopUp = ({project}:{project:projectInterface}) => {
                 <div className="skills-container">
                     {project.skills.map((skill,key)=><Skill skill={skill} key={key}/>)}
                 </div>
+            </div>
+            <div className="links-wrapper">
+                { project.link.repo &&
+                    <Link className='outer-link' target="_blank" to ={project.link.link}>GitHub Link</Link>
+                }
             </div>
         </div>
     </div>

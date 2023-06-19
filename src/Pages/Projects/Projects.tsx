@@ -11,6 +11,10 @@ const Projects = () => {
 
     const [activeCard,setActiveCard] = useState({id:"",backgroundColor:""});
    
+    useEffect(()=>{
+        const startTime = new Date().getTime();
+        return ()=> {console.log((new Date().getTime() - startTime) /1000)}
+    },[])
     
 
   return (

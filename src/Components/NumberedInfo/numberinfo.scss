@@ -10,13 +10,19 @@ $design-color : #fc4545 ;
     padding: 10px;
     position: relative;
     overflow: hidden;
-    height: fit-content;
-    margin-left: 5px ;
+    height: fit-content;    
+    margin: auto ;
     .info-holder{
         display: flex;
         justify-content: space-around;
         align-items: center;
         text-align: center;
+        .info{
+            display: grid;
+            grid-template-columns: 50% 50%;
+        
+        
+        }
         .number{
             color: #ffffff;
             font-weight: 700;
@@ -27,24 +33,24 @@ $design-color : #fc4545 ;
             font-weight: 700;
             font-size: 60px;
         }
-        #experince{
-            width: 30%;
-            h1{
-                margin: auto;
-                padding: 5px 10px;
-                background-color: #323232;
-                border-radius: 30%;
-                width: 100px;
-                height: 80px;
-            }
-            h3{
-                color: #323232;
-                font-size: 32px;
-            }
+        h1{
+            &#experince{
+            
+                    margin: auto;
+                    padding: 5px 10px;
+                    background-color: #323232;
+                    border-radius: 30%;
+                    width: 100px;
+                    height: 80px;
+                }
         }
-        #projects{
-            width: 30%;
-            h1{
+        h3#experince-label{
+            color: #323232;
+            font-size: 32px;
+        }
+        h1{
+            &#projects{
+                width: 30%;
                 padding: 5px 10px;
                 background-color: #FC4545;
                 border-radius: 30%;
@@ -53,10 +59,10 @@ $design-color : #fc4545 ;
                 height: 80px;
                
             }
-            h3{
-                color: #FC4545;
-                font-size: 32px;
-            }
+        }
+        h3#project-label{
+            color: #FC4545;
+            font-size: 32px;
         }
     }
     .circle{
@@ -97,7 +103,7 @@ $design-color : #fc4545 ;
         padding: 5px 10px;
         border-radius: 15px;
         text-align: center;
-        font-size: 18px;
+        font-size: 20px;
         font-weight: 600;
         background-color: #ffffff;
         margin: 2px;
@@ -111,4 +117,23 @@ $design-color : #fc4545 ;
             border: 2px solid $design-color;
         }
     }
+}
+.dark{
+    #left{
+        background-color: #D1DA36 !important;
+        bottom: -50px;
+        left: -50px;
+    }
+        h1#experince{
+            background-color: #FFD700 !important ;
+            color: #171717 !important;
+        }
+        h3#experince-label{
+            color: #e8e8e8 !important;
+        }
+    
+    .skill-tag{
+        background-color: #212121;
+        color: #f7f7f7;
+}
 }

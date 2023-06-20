@@ -14,7 +14,8 @@ export interface props {
   setProjectPop:React.Dispatch<React.SetStateAction<{show:boolean,project:{},top:number}>>,
   selctedLink:string,
   setSelectedLink: React.Dispatch<React.SetStateAction<string>>
-  innerWidth : number
+  innerWidth : number,
+  timeSpent : object,setTimeSpent : React.Dispatch<React.SetStateAction<object>>
 }
 
 const obj:props = {
@@ -23,7 +24,9 @@ const obj:props = {
   setProjectPop : ()=>{},
   selctedLink: "",
   setSelectedLink:()=>{},
-  innerWidth : window.innerWidth
+  innerWidth : window.innerWidth,
+  timeSpent : {},
+  setTimeSpent: ()=>{}
 }
 export const appContext = createContext(obj);
 
@@ -36,9 +39,9 @@ function App() {
   const [selctedLink,setSelectedLink] = useState("Home");
 
   const activeLink = window.location.href.split("/")[0];
-  
   const linksList = ['home','projects','about','contact'];
-  
+  const [timeSpent,setTimeSpent] = useState({});
+
   if(linksList.includes(activeLink))
     setSelectedLink(activeLink)
   
@@ -49,6 +52,7 @@ function App() {
         dark,setDark,
         projectPop,setProjectPop,
         selctedLink,setSelectedLink,
+        timeSpent,setTimeSpent,
         innerWidth
       }}>
 

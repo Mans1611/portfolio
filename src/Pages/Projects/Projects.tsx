@@ -7,13 +7,26 @@ import { transform } from 'typescript';
 import FieldPage from '../../Components/ProjectField/FieldPage';
 
 const Projects = () => {
-    const {dark} = useContext(appContext);
+    let {dark,timeSpent,setTimeSpent} = useContext(appContext);
 
     const [activeCard,setActiveCard] = useState({id:"",backgroundColor:""});
    
     useEffect(()=>{
         const startTime = new Date().getTime();
-        return ()=> {console.log((new Date().getTime() - startTime) /1000)}
+        return ()=> {
+            if(timeSpent.hasOwnProperty("project")){
+               setTimeSpent((time:{project:number})=>
+                    {
+                        return {
+                            ...time,
+                        project: time['project']  + Math.round((new Date().getTime() - startTime) /1000)
+                    }
+                    })
+            }else{
+                setTimeSpent((time)=>{return {...time,project : Math.round((new Date().getTime() - startTime) /1000)}})  
+            }
+            console.log(timeSpent)
+        }
     },[])
     
 

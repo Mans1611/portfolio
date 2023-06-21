@@ -1,0 +1,101 @@
+.certificate-view{
+    min-height: 100vh;
+    background-color: #dca9a99e ;
+    .title{
+        font-size: 75px;
+        padding: 20px 5px;
+        color: #323232;
+        text-align: center;
+    }
+    .grid-container{
+        display: grid;
+        grid-template-columns: 60% 35%;
+        margin-top: 20px;
+       
+        .flex-column{
+            display: flex;
+            flex-direction: column;
+            .certificate-container{
+                background-color: #323232;
+                height: 460px;
+                object-fit: cover;
+                border-radius: 15px;
+                width: 85%;
+                margin: auto;
+                overflow: hidden;
+                display: flex;
+                position: relative;
+                img{
+                    transition: all 400ms;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: fill;
+                    flex: none;
+                    position: relative;
+                }
+            }
+        }
+        .description-container{
+            width: 95%;
+            margin: auto;
+            background-color: #F1F1F1;
+            min-height: 300px;
+            border-radius: 15px;
+            padding: 10px;
+            padding-left: 20px;
+            .flex{
+                display: flex;
+                align-items: center;
+                margin: 20px 0;
+            }
+            h2{
+                text-align: center;
+                font-size: 30px;
+                flex: 3;
+                
+            }
+            .value{
+                flex: 9;
+                color: #FC4545;
+                font-size: 26px;
+                margin-left: 20px;
+            }
+        }
+    }
+    .small-pic-container{
+        display: flex;
+        justify-content: center;
+        margin: 20px auto;
+        .small-pic{
+            width: 70px;
+            height: 65px;
+            border-radius: 5px;
+            margin: auto 5px;
+            opacity: 0.70;
+            cursor: pointer;
+        }
+    }
+
+    &.dark{
+        background-color: #1e303a;
+    
+        .title{
+            color: #f1f1f1;
+        }
+        
+    .grid-container{
+        display: grid;
+        grid-template-columns: 60% 35%;
+        margin-top: 20px;
+       
+        
+        .description-container{
+            background-color: #011520;
+            
+            h2{
+                 color: #fff;
+            }
+        }
+    }
+    }
+}

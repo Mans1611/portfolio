@@ -7,6 +7,7 @@ import HomeProjects from '../../Components/HomeProjects/HomeProjects';
 import NumberedInfo from '../../Components/NumberedInfo/NumberedInfo';
 import SkillsSection from '../../Components/Skill/SkillsSection';
 import TopProjects from '../../Components/TopProjects/TopProjects';
+import Certificate from '../../Components/Certificate/Certificate';
 
 const Home = () => {
   const {
@@ -44,14 +45,12 @@ const Home = () => {
             </div>
 
         </div>
-
         <div className="details-holder">
           <NumberedInfo/>
           <SkillsSection/>
         </div>
-
         <TopProjects/>
-       
+        <Certificate/>
     </div>
   )
 }

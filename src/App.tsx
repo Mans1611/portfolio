@@ -6,6 +6,7 @@ import Home from './Pages/Home/Home';
 import Projects from './Pages/Projects/Projects';
 import ProjectPopUp from './Components/ProjectPopUp/ProjectPopUp';
 import { projectInterface } from './data/projectList';
+import About from './Pages/About/About';
 
 export interface props {
   dark : boolean | string| null,
@@ -61,9 +62,8 @@ function App() {
           <Route path="/" element={<NavBar/>}>
             <Route index path='home' element={<Home/>}></Route>  
             <Route path='projects' element={<Projects/>}></Route>  
-            <Route path='about'></Route>  
-            <Route path='contact'></Route>  
-          
+            <Route path='about' element={<About/>}></Route>  
+            <Route path='contact'></Route>
           </Route> 
 
           </Routes>

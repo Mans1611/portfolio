@@ -1,0 +1,40 @@
+.about-page{
+    min-height: 100vh;
+    background-color: #DDFFBB;
+    .about-flex-box{
+        display: grid;
+        padding: 20px;
+        grid-template-columns: 35% 65%;
+        .photo-background{
+            overflow: hidden;
+            width: 70%;
+            margin: auto;
+            background-color: #fc4545d0;
+            border-radius: 40%;
+            border-bottom-right-radius: 0px;
+            position: relative;
+            img{
+                width: 100%;
+                height: 100%;
+                position: relative;
+                bottom: -10px;
+            }
+            .circle{
+                background-color: #2C333B;
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                position: absolute;
+                top: -45px;
+                left: -45px;
+            }
+        }
+        .chatbox-container{
+            border-radius: 20px;
+            background-color: #17171764;
+            padding: 15px 10px;
+
+        }
+    }
+
+}

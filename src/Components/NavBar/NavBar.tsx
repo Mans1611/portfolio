@@ -15,6 +15,8 @@ const NavBar = () => {
     selctedLink,setSelectedLink
   } = useContext(appContext);
   
+    const [showburger,setShowBurger] = useState(false);
+
 
   const moveHover = (e: any)=>{
       const activeBox: (HTMLElement | null) = document.getElementById('active');
@@ -28,20 +30,12 @@ const NavBar = () => {
         }
         accumulateWidth+= ((linksList[i] as HTMLElement).getBoundingClientRect().width)
       }
-
       if(activeBox?.style != undefined ){
         activeBox.style.width =  `${e.target.getBoundingClientRect().width}px`
         activeBox.style.transform =  `translateX(${accumulateWidth }px)`
-
       }
-
       const active = document.getElementsByClassName('active')[0];
     }
-    
-    
-    
-  
-
     useEffect(()=>{
       const activeBox: (HTMLElement | null) = document.getElementById('active');
       const linksList = document.getElementsByClassName('nav-links-container')[0].children
@@ -61,10 +55,25 @@ const NavBar = () => {
     const handleShowSideBar = ()=>{
       setShowSidebar(true);
       const app = document.getElementsByTagName('body')[0]
-      if(app?.style)
-          app.style.overflow = 'hidden' 
+      if(app?.style) {
+        app.style.overflow = 'hidden'    
+      }
+      setTimeout(()=>{
+        const sideBar = document.getElementById('sidebar')
+        if(sideBar?.style){
+          sideBar.style.top = `${window.scrollY}px`
+          console.log(window.scrollY)
+        }
+      },0)
     }
-
+    document.addEventListener('scroll',(e)=>{
+      let top:number = window.scrollY
+      if(top > 400)
+        setShowBurger(true)
+      else if(top < 400){
+        setShowBurger(false)
+      }
+    })
 
   return (
     <>
@@ -87,7 +96,8 @@ const NavBar = () => {
         </div>
     </div>
     <Outlet/>
-    {showSidebar && <SideBar  
+    {showburger && <Menu  onClick={handleShowSideBar}  className={`top-burger-icon ${dark?'dark':''}`}/>}
+    {showSidebar && <SideBar 
                     setShowSidebar = {setShowSidebar}/>}
     </>
   )

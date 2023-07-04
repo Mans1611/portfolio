@@ -41,7 +41,7 @@ const SideBar = (props : propsType) => {
         <div onClick={(e)=>hideSideBar(e.target)} className="modal">
             <div id='sidebar'  className={`sidebar-container ${dark?'dark':''}`}>
                 <div className="backicon">
-                    <KeyboardArrowRightIcon onClick = {()=>disapper(null)}/>
+                    <KeyboardArrowRightIcon className='disappericon' onClick = {()=>disapper(null)}/>
                 </div>
 
                 <div className="protofolio-title">

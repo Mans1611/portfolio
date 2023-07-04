@@ -11,7 +11,6 @@ const Certificate = () => {
 
     const [currentCer,setCurrentCer] = useState(certificateStart);
     
-   
    useEffect(()=>{
         
         const interval = setInterval(()=>{
@@ -37,14 +36,21 @@ const Certificate = () => {
             }
 
             setCurrentCer((c)=>c.nextCertificate as certifacteInterface);
-        
-    
-    },8000)
+        },8000)
+        const certificate = document.getElementById('certificate-view')
+        const circle_blur = document.getElementById('blur-circle');
+        certificate?.addEventListener('mousemove',(event)=>{
+            if(circle_blur?.style){
+                circle_blur.style.top = `${event.clientY}px`
+                circle_blur.style.left = `${event.clientX}px`
+            }
 
+        })
         return ()=> clearInterval(interval);
    },[currentCer])
     return (
-            <div className={`certificate-view ${dark?'dark':''}`}>
+            <div id='certificate-view' className={`certificate-view ${dark?'dark':''}`}>
+                {/* <div id="blur-circle"></div> */}
                 <h1 className='title'>Certificate</h1>
                 <div className="grid-container">
                     <div className="flex-column">

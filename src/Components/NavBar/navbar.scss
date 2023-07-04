@@ -87,6 +87,23 @@
         }
     }
 }
+.top-burger-icon{
+    position: fixed;
+    background-color: #e0e0e0;
+    top: 20px;
+    right: 30px;
+    color: #171717;
+    z-index: 99;
+    cursor: pointer;
+    font-size: 50px !important;
+    border-radius: 10px;
+    &.dark{
+        background-color: #171717;
+        color: #e1e1e1 !important;
+    }
+}
+
+
 
 .sidebar-container{
     position: absolute;
@@ -106,6 +123,7 @@
             color: #ffffff;
             width: 45px;
             height: 45px;
+            cursor: pointer;
         }
     }
     .protofolio-title{

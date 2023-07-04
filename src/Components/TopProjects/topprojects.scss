@@ -6,6 +6,10 @@ $data-color :#439f4c;
     min-height:100vh;
     padding: 10px;
     background-color: #ff474777;
+    transition: all 400ms;
+    border-bottom-right-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+
     .top-title{
         color: #414141;
         font-size: 80px;
@@ -20,10 +24,11 @@ $data-color :#439f4c;
         margin: 40px auto;
     }
     .top-project-card{
-        width: 460px;
+        width:90%;
         height: 270px;
         background-color: #272727;
         border-radius: 10px;
+        transition: all 400ms;
         margin: 30px auto;
         overflow: hidden;
         position: relative;
@@ -174,6 +179,18 @@ $data-color :#439f4c;
                 
                 }
                 
+            }
+        }
+    }
+}
+@media screen and (max-width:760px) {
+    .top-projects{
+        .flex-box{
+            flex-direction: column;
+            margin: 0;
+            .top-project-card{
+                width: 90%;
+                height: 270px;
             }
         }
     }

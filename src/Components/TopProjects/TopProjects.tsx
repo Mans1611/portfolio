@@ -11,7 +11,7 @@ const TopProjects = () => {
 
 
   return (
-    <div className={`top-projects ${dark?'dark' : ''}`}>
+    <div id ='top3_projects' className={`top-projects ${dark?'dark' : ''}`}>
 
         <h1 className='top-title'>Top Projects</h1>
         <div className='flex-box top-container'>

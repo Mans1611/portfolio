@@ -9,7 +9,7 @@ const About = () => {
 
 return (
     
-    <div className='about-page'>
+    <div className={`about-page ${dark ? 'dark':''}`}>
         <div className="about-flex-box">
             <AboutPhoto/>
             <ChatBox/>

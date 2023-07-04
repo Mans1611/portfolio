@@ -47,6 +47,8 @@ $design-color : #fc4545 ;
         h3#experince-label{
             color: #323232;
             font-size: 32px;
+            position: relative;
+            z-index: 10;
         }
         h1{
             &#projects{

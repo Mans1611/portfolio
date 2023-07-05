@@ -88,13 +88,13 @@ $design-color : #FC4545 ;
         border-radius: 50%;
         position: absolute;
         z-index: 9;
-        animation: rotate 4s linear infinite; /* this sets up the animation */
+        animation: rotate 6s linear infinite; /* this sets up the animation */
         transform-origin: top left;
         &#right{
             right: -40px;
             top: -40px;
             background-color: #fc4545e0 ;
-            filter: blur(10px);
+            filter: blur(20px);
         }
         &#left{
             filter: blur(10px);

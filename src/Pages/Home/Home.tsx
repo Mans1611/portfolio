@@ -5,7 +5,8 @@ import Mans from '../../assets/manstrans.png';
 import { appContext } from '../../App';
 import NumberedInfo from '../../Components/NumberedInfo/NumberedInfo';
 import SkillsSection from '../../Components/Skill/SkillsSection';
-
+import Step from '../../Components/Step/Step';
+import { steps } from '../../data/step';
 
 const Home = () => {
   const {
@@ -49,6 +50,8 @@ const Home = () => {
           <NumberedInfo/>
           <SkillsSection/>
         </div>
+       <Step step={steps[0]}/>
+       <Step step={steps[1]}/>
        
     </div>
   )

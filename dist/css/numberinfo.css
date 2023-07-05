@@ -1,0 +1,177 @@
+.home-details {
+  width: 90%;
+  border-radius: 10px;
+  background-color: #dfb99b3e;
+  padding: 10px;
+  position: relative;
+  overflow: hidden;
+  height: fit-content;
+  margin: auto;
+}
+
+.home-details .info-holder {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+.home-details .info-holder .info {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.home-details .info-holder .info-title {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 60px;
+}
+
+.home-details .info-holder .number {
+  width: 80px;
+  height: 80px;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 60px;
+  position: relative;
+  z-index: 10;
+}
+
+.home-details .info-holder .number::before, .home-details .info-holder .number::after {
+  content: "";
+  position: absolute;
+  background-color: inherit;
+  width: 80px;
+  border-radius: 50%;
+  height: 80px;
+  bottom: 0;
+  z-index: -1;
+}
+
+.home-details .info-holder .number::before {
+  right: -45%;
+}
+
+.home-details .info-holder .number::after {
+  left: -45%;
+}
+
+.home-details .info-holder h1#experince {
+  margin: auto;
+  padding: 5px 10px;
+  background-color: #323232;
+}
+
+.home-details .info-holder h3#experince-label {
+  color: #323232;
+  font-size: 32px;
+  position: relative;
+  z-index: 12;
+}
+
+.home-details .info-holder h1#projects {
+  padding: 5px 10px;
+  background-color: #FC4545;
+  margin: auto;
+}
+
+.home-details .info-holder h3#project-label {
+  color: #FC4545;
+  font-size: 32px;
+}
+
+.home-details .circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 9;
+  animation: rotate 6s linear infinite;
+  /* this sets up the animation */
+  transform-origin: top left;
+}
+
+.home-details .circle#right {
+  right: -40px;
+  top: -40px;
+  background-color: #fc4545e0;
+  filter: blur(30px);
+}
+
+.home-details .circle#left {
+  filter: blur(10px);
+  background-color: #323232;
+  bottom: -40px;
+  left: -40px;
+}
+
+.home-details .circle#left-bottom {
+  filter: blur(10px);
+  top: -40px;
+  left: -40px;
+  background-color: #fc4545dc;
+}
+
+.home-details .skills-title {
+  color: #FC4545;
+  font-size: 42px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.home-details .skill-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.home-details .skill-tag {
+  padding: 5px 10px;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  background-color: #ffffff;
+  margin: 2px;
+}
+
+.home-details .skill-tag.web {
+  border: 2px solid #d1da36;
+}
+
+.home-details .skill-tag.data {
+  border: 2px solid #439f4c;
+}
+
+.home-details .skill-tag.design {
+  border: 2px solid #FC4545;
+}
+
+.dark #left {
+  background-color: #D1DA36 !important;
+  bottom: -50px;
+  left: -50px;
+}
+
+.dark h1#experince {
+  background-color: #FFD700 !important;
+  color: #171717 !important;
+}
+
+.dark h3#experince-label {
+  color: #e8e8e8 !important;
+}
+
+.dark .skill-tag {
+  background-color: #212121;
+  color: #f7f7f7;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/*# sourceMappingURL=numberinfo.css.map */

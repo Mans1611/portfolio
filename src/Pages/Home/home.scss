@@ -70,6 +70,22 @@
             
         }
     }
+    // .resume-container{
+    //     padding: 10px;
+    //     margin:20px auto;
+    //     a{
+    //         background-color: #FC4545;
+    //         text-decoration: none;
+    //         padding: 10px 30px;
+    //         border-radius: 10px;
+    //         color: #ffffff;
+    //         font-size: 45px;
+    //         font-weight: 600;
+    //         margin: 0 60px;
+            
+    //     }
+
+    // }
     .back-dark-box{
         background-color: #222222c5;
         position: relative;
@@ -160,6 +176,43 @@
         padding: 5px;
     }
 }
-// *{
-//     border:2px solid #111
-// }
+.resume-container{
+    display: flex;
+    justify-content: center;
+    margin: 20px ;
+}
+.resumeLink{
+    padding: 5px 30px;
+    border-radius: 10px;
+    color: #ffffff;
+    background-color: #FC4545;
+    text-decoration: none;
+    font-size: 55px;
+    font-weight: 600;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+    .gray{
+        height: 100%;
+        position: absolute;
+        background-color: #272727;
+        z-index: -1;
+        left: 0;
+        bottom: 0;
+    }
+    &:hover{
+        color: #ffffff;
+        .gray{
+            z-index: -1;
+            animation: toright 400ms linear forwards;
+        }
+    }
+}
+
+@keyframes toright {
+    from{
+        width: 0;
+    }to{
+        width: 100%;
+    }
+}

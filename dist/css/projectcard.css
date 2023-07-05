@@ -1,0 +1,98 @@
+.project-card {
+  padding: 5px;
+  padding-bottom: 20px;
+  cursor: pointer;
+  background-color: #FC4545;
+  width: 95%;
+  min-height: 180px;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  flex: 4;
+  transition: 200ms all;
+  margin: 0 5px;
+}
+
+.project-card .title h2 {
+  font-size: 46px;
+  font-weight: 600;
+  color: #373737;
+  text-align: center;
+}
+
+.project-card .description {
+  position: relative;
+  z-index: 9;
+  width: 75%;
+  margin: 10px 20px;
+  font-size: 22px;
+  margin-right: 5px;
+  padding: 5px;
+}
+
+.project-card .img-container {
+  position: absolute;
+  right: -30px;
+  bottom: -30px;
+  z-index: 5;
+}
+
+.project-card .img-container .img-background {
+  width: 135px;
+  height: 135px;
+  opacity: 0.75;
+}
+
+.project-card.dark .title h2 {
+  color: #E7E7E7;
+}
+
+.project-card.activeCard {
+  position: relative;
+  z-index: 10;
+  flex: 8;
+  transition: 200ms all;
+  margin: 0 5px;
+}
+
+.project-card.activeCard .title h2 {
+  font-size: 52px;
+}
+
+.project-card.activeCard .description {
+  font-size: 28px;
+  padding: 8px;
+}
+
+.project-card.activeCard .img-container {
+  right: -20px;
+  bottom: -20px;
+  z-index: 5;
+}
+
+.project-card.activeCard .img-container .img-background {
+  width: 135px;
+  height: 135px;
+  opacity: 0.85;
+}
+
+.project-card .white-shiny {
+  position: absolute;
+  z-index: 12;
+  height: 2px;
+  border-radius: 20%;
+  background-color: #ffffffa3;
+  top: 180px;
+  width: 180%;
+  animation: shinny 5500ms linear backwards infinite;
+}
+
+@keyframes shinny {
+  from {
+    transform: translate(-70%, 30%) rotate(45deg);
+  }
+  to {
+    transform: translate(60%, 30%) rotate(45deg);
+  }
+}
+/*# sourceMappingURL=projectcard.css.map */

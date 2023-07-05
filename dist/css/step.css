@@ -1,0 +1,67 @@
+.step-container {
+  height: fit-content;
+  background-color: #B8D59C;
+  padding: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.step-container.dark .flex-container .text-wrapper h1 {
+  color: #ffffff;
+}
+
+.step-container.dark .flex-container .text-wrapper p {
+  color: #ffffff;
+}
+
+.step-container .flex-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 4;
+}
+
+.step-container .flex-container .text-wrapper {
+  padding: 20px;
+  position: relative;
+  z-index: 4;
+  flex: 5;
+}
+
+.step-container .flex-container .text-wrapper h1 {
+  font-size: 85px;
+  color: #212121;
+  font-weight: 600;
+}
+
+.step-container .flex-container .text-wrapper p {
+  font-size: 35px;
+  color: #272727;
+  margin-top: 15px;
+  margin-left: 35px;
+}
+
+.step-container .flex-container .img-wrapper {
+  flex: 7;
+  display: flex;
+  justify-content: center;
+}
+
+.step-container .flex-container .img-wrapper .belt {
+  position: absolute;
+  background-color: #FEEB5E;
+  width: 150%;
+  height: 250px;
+  transform: rotate(55deg);
+  z-index: 3;
+  top: 0;
+  left: -30%;
+}
+
+.step-container .flex-container .img-wrapper img {
+  position: relative;
+  z-index: 4;
+  width: 450px;
+  height: 450px;
+}
+/*# sourceMappingURL=step.css.map */

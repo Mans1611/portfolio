@@ -1,0 +1,208 @@
+.top-projects {
+  min-height: 100vh;
+  padding: 10px;
+  background-color: #ff474777;
+  transition: all 400ms;
+  border-bottom-right-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+
+.top-projects .top-title {
+  color: #414141;
+  font-size: 80px;
+  text-align: center;
+}
+
+.top-projects .top-title::selection {
+  background-color: #fc4545;
+  color: #272727;
+}
+
+.top-projects .top-container {
+  padding: 10px;
+}
+
+.top-projects .flex-box {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 40px auto;
+}
+
+.top-projects .top-project-card {
+  width: 90%;
+  height: 270px;
+  background-color: #272727;
+  border-radius: 10px;
+  transition: all 400ms;
+  margin: 30px auto;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  cursor: pointer;
+}
+
+.top-projects .top-project-card .img-wrapper {
+  position: relative;
+  z-index: 4;
+}
+
+.top-projects .top-project-card .img-wrapper img {
+  transition: all 200ms;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.55;
+}
+
+.top-projects .top-project-card .description {
+  position: absolute;
+  right: -30px;
+  z-index: 9;
+  width: 30%;
+  color: #272727;
+  transition: all 200ms;
+  text-align: center;
+}
+
+.top-projects .top-project-card .background-cover {
+  width: 55%;
+  height: 151%;
+  position: absolute;
+  background-color: #d2da36a6;
+  z-index: 6;
+  transform: rotate(-8deg);
+  right: -110px;
+  bottom: -15px;
+  transition: all 200ms;
+}
+
+.top-projects .top-project-card .background-cover.design {
+  background-color: #fc4545b6;
+}
+
+.top-projects .top-project-card .background-cover.data {
+  background-color: #439f4cc5;
+}
+
+.top-projects .top-project-card .dark-shadow {
+  position: absolute;
+  z-index: 10;
+  right: 0;
+  width: 30px;
+  height: 100%;
+  background: #eaeaea;
+  background: linear-gradient(90deg, rgba(234, 234, 234, 0) 0%, #fc4545b6 85%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#eaeaea",endColorstr="#272727",GradientType=1);
+}
+
+.top-projects .top-project-card .dark-shadow.web {
+  background: #eaeaea;
+  background: linear-gradient(90deg, rgba(234, 234, 234, 0) 0%, #d2da36a6 85%);
+}
+
+.top-projects .top-project-card .dark-shadow.data {
+  background: #eaeaea;
+  background: linear-gradient(90deg, rgba(234, 234, 234, 0) 0%, #439f4cc5 85%);
+}
+
+.top-projects .top-project-card:hover .img-wrapper img {
+  opacity: 0.35;
+  transform: translateX(-50px);
+}
+
+.top-projects .top-project-card:hover .background-cover {
+  background-color: #d2da36;
+  transform: rotate(-8deg);
+  right: -10px;
+}
+
+.top-projects .top-project-card:hover .background-cover.design {
+  background-color: #fc4545;
+}
+
+.top-projects .top-project-card:hover .background-cover.data {
+  background-color: #439f4c;
+}
+
+.top-projects .top-project-card:hover .description {
+  position: absolute;
+  right: 0px;
+  z-index: 9;
+  width: 50%;
+  color: #272727;
+  padding: 5px;
+  font-size: 18px;
+}
+
+.top-projects .top-project-card:hover .dark-shadow {
+  display: none;
+}
+
+.top-projects .navto-projects {
+  margin: 40px auto;
+  display: flex;
+  justify-content: center;
+}
+
+.top-projects .navto-projects a {
+  padding: 10px 30px;
+  border-radius: 10px;
+  background-color: #fc4545;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 50px;
+  font-weight: 600;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.top-projects .navto-projects a .gray {
+  height: 100%;
+  position: absolute;
+  background-color: #272727;
+  z-index: -1;
+  left: 0;
+  bottom: 0;
+}
+
+.top-projects .navto-projects a:hover {
+  color: #ffffff;
+}
+
+.top-projects .navto-projects a:hover .gray {
+  animation: toright 300ms linear forwards;
+}
+
+.dark .top-projects {
+  background-color: #292929c8;
+}
+
+.dark .top-projects h1 {
+  color: #fc4545;
+}
+
+.dark .top-projects .navto-projects a .gray {
+  background-color: #00899c;
+}
+
+@media screen and (max-width: 760px) {
+  .top-projects .flex-box {
+    flex-direction: column;
+    margin: 0;
+  }
+  .top-projects .flex-box .top-project-card {
+    width: 90%;
+    height: 270px;
+  }
+}
+
+@keyframes toright {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=topprojects.css.map */

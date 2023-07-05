@@ -1,0 +1,124 @@
+.page {
+  background-color: #DDFFBB;
+  padding: 5px;
+}
+
+.page.dark {
+  background-color: #011520;
+}
+
+.page.dark .page-title {
+  color: #f1ffe3;
+}
+
+.page .page-title {
+  padding: 20px;
+  text-align: center;
+}
+
+.page .page-title h1 {
+  font-size: 80px;
+}
+
+.page .projects-cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 33%);
+  width: 90%;
+  margin: 20px auto;
+}
+
+.page .projects-wrapper {
+  position: relative;
+  overflow-x: hidden;
+  height: 100vh;
+}
+
+.page .projects-wrapper .projects-container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  margin: auto 0;
+  border-radius: 20px;
+  display: flex;
+  transition: all 300ms;
+}
+
+.page .projects-wrapper .projects-container .side-name {
+  flex: 1;
+  position: absolute;
+  font-size: 28px;
+  left: -35px;
+  cursor: pointer;
+  transform: rotate(-90deg);
+}
+
+.page .projects-wrapper .projects-container .projects-grid {
+  display: grid;
+  background-color: #171717;
+  width: 80%;
+  min-height: 300px;
+  margin: 30px auto;
+  padding: 10px;
+  background-color: #1717174a;
+  border-radius: 10px;
+  grid-template-columns: repeat(3, 33%);
+  grid-gap: 5px;
+  transform: translateX(-30px);
+}
+
+.page .projects-wrapper .projects-container .img-background {
+  position: absolute;
+  bottom: 10px;
+  left: 60px;
+  z-index: -1;
+}
+
+.page .projects-wrapper .projects-container .img-background img {
+  width: 400px;
+  height: 370px;
+  opacity: 0.15;
+}
+
+@media screen and (max-width: 560px) {
+  .page .projects-cards-container {
+    grid-template-columns: repeat(1, 100%);
+    grid-gap: 5px;
+    width: 90%;
+    margin: 20px auto;
+  }
+  .page .projects-wrapper {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+  }
+  .page .projects-wrapper .projects-container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin: auto 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .page .projects-wrapper .projects-container .side-name {
+    display: block;
+    text-align: center;
+    font-size: 28px;
+    cursor: pointer;
+    position: initial;
+    transform: initial;
+    flex: initial;
+  }
+  .page .projects-wrapper .projects-container .projects-grid {
+    margin: 20px auto;
+    transform: initial;
+    width: 90%;
+    min-height: fit-content;
+    max-height: 70vh;
+    overflow-y: scroll;
+    grid-template-columns: repeat(1, 100%);
+  }
+  .page .projects-wrapper .projects-container .img-background {
+    display: none;
+  }
+}
+/*# sourceMappingURL=projects.css.map */

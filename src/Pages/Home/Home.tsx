@@ -7,6 +7,7 @@ import NumberedInfo from '../../Components/NumberedInfo/NumberedInfo';
 import SkillsSection from '../../Components/Skill/SkillsSection';
 import Step from '../../Components/Step/Step';
 import { steps } from '../../data/step';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   const {
@@ -44,7 +45,12 @@ const Home = () => {
                 <img className='my_photo' src={Mans}/>
               </div>
             </div>
-
+        </div>
+        <div className="resume-container">
+          <Link className='resumeLink' to = '/'>
+            <div className="gray"></div>
+            My Resume
+          </Link>
         </div>
         <div className="details-holder">
           <NumberedInfo/>

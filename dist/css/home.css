@@ -1,0 +1,219 @@
+.home-page {
+  background-color: #DDFFBB;
+  min-height: calc(100vh - 50px);
+  max-height: fit-content;
+}
+
+.home-page.dark {
+  background-color: #011520;
+}
+
+.home-page.dark .home-first-wrapper .name-typing {
+  background-color: #1B2631;
+  color: #f1f1f1;
+  margin: 20px 10px;
+}
+
+.home-page.dark .home-first-wrapper .pic-background {
+  background-color: #272727b3;
+}
+
+.home-page .home-first-wrapper {
+  display: flex;
+  padding: 50px 0;
+  min-height: 380px;
+}
+
+.home-page .home-first-wrapper .half {
+  width: 50%;
+}
+
+.home-page .home-first-wrapper .name-typing {
+  text-align: center;
+  font-size: 52px;
+  border-radius: 10px;
+  color: #171717;
+  background-color: #ffffffbe;
+  margin: auto;
+  flex: 7;
+  margin-left: 20px;
+  animation: slidedown forwards 150ms linear;
+}
+
+.home-page .home-first-wrapper .name-typing .code {
+  color: #FC4545;
+  font-size: 60px;
+  font-weight: 600;
+}
+
+.home-page .home-first-wrapper .name-typing #myname {
+  font-weight: 600;
+  color: #FFD700;
+  font-size: 56px;
+}
+
+.home-page .home-first-wrapper .picture-wrapper {
+  flex: 5;
+}
+
+.home-page .home-first-wrapper .pic-background {
+  width: 240px;
+  height: 240px;
+  transform: rotate(45deg);
+  border-radius: 45px;
+  background-color: #181f4b;
+  margin: 30px auto 0;
+  border: 3px solid #171717;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.home-page .home-first-wrapper .my_photo {
+  transform: rotate(-45deg) translateY(20px);
+  width: 85%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.home-page .back-dark-box {
+  background-color: #222222c5;
+  position: relative;
+  height: 300px;
+  width: 110%;
+  transform: rotate(10deg) translate(-30px, 20px);
+}
+
+.home-page .back-dark-box .tasks {
+  transform: rotate(-10deg) translate(-30px, 95px);
+  color: #ffffff;
+  position: absolute;
+  left: 120px;
+  font-size: 30px;
+  top: -40px;
+}
+
+.home-page .back-dark-box .tringle {
+  display: none;
+  position: absolute;
+  right: -50px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 230px 230px;
+  transform: rotate(125deg);
+  border-radius: 20px;
+  top: 35px;
+  border-color: transparent transparent #FFAE6D transparent;
+}
+
+.home-page .details-holder {
+  display: grid;
+  min-height: 200px;
+  grid-template-columns: 60% 40%;
+  padding-bottom: 15px;
+}
+
+@media screen and (max-width: 760px) {
+  .home-page .home-first-wrapper {
+    display: initial;
+    padding: 50px 0;
+    min-height: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .home-page .home-first-wrapper .half {
+    width: initial;
+  }
+  .home-page .home-first-wrapper .half.picture-wrapper {
+    order: 1;
+  }
+  .home-page .home-first-wrapper .pic-background {
+    margin-bottom: 20px !important;
+    background-color: #FC4545;
+    margin: 30px auto 0;
+    border: none;
+    flex: 5;
+  }
+  .home-page .home-first-wrapper .picture-wrapper {
+    order: 1 !important;
+  }
+  .home-page .home-first-wrapper .name-typing {
+    order: 2 !important;
+    text-align: center;
+    font-size: 45px;
+    margin: 20px auto;
+    width: 96%;
+  }
+  .home-page .home-first-wrapper .name-typing .code {
+    color: #FC4545;
+    font-size: 55px;
+  }
+  .home-page .home-first-wrapper .name-typing #myname {
+    color: #FFD700;
+    font-size: 50px;
+  }
+  .home-page .details-holder {
+    grid-template-columns: 100%;
+    row-gap: 20px;
+  }
+}
+
+@keyframes slidedown {
+  from {
+    height: 0;
+  }
+  to {
+    height: fit-content;
+    padding: 5px;
+  }
+}
+
+.resume-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.resumeLink {
+  padding: 5px 30px;
+  border-radius: 10px;
+  color: #ffffff;
+  background-color: #FC4545;
+  text-decoration: none;
+  font-size: 55px;
+  font-weight: 600;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.resumeLink .gray {
+  height: 100%;
+  position: absolute;
+  background-color: #272727;
+  z-index: -1;
+  left: 0;
+  bottom: 0;
+}
+
+.resumeLink:hover {
+  color: #ffffff;
+}
+
+.resumeLink:hover .gray {
+  z-index: -1;
+  animation: toright 400ms linear forwards;
+}
+
+@keyframes toright {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=home.css.map */

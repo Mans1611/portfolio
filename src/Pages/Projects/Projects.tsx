@@ -57,7 +57,8 @@ const Projects = () => {
                          workingFields.map((field,index)=>
                          <FieldPage 
                             field = {field}
-                            index = {index}
+                            index={index}
+                            key = {index}
                             projects={field.projects}
                             />
                     )

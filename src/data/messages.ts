@@ -1,30 +1,36 @@
 export interface messageInterface{
+    id:number,
     question : string,
     answer: string,
-    time : string
+    time:string | null
 }  
 
 
 export const messages:messageInterface[] = [
     {
+        id:1,
         question : "What is your Full Name?",
         answer : "Manosur Mohamed Manosur Aly Yousef.",
-        time : new Date().toISOString().split('T')[1].slice(0,5)
+        time:null
     },
     {
+        id:2,
         question : "How Old Are You?",
         answer : "I am 21 years old.",
-        time : new Date().toISOString().split('T')[1].slice(0,5)
+        time:null
     },
     {
+        
+        id:3,
         question : "What is your role?",
         answer : "I am a senior student @ Faculty of Engineering in Ain Shams University, I am also looking for a job or intern, which can deepen my knowledge in both Web and Data Science Field",
-        time : new Date().toISOString().split('T')[1].slice(0,5)
+        time:null
     },
     {
-        question : "What is your name",
-        answer : "Manosur Mohamed",
-        time : new Date().toISOString().split('T')[1].slice(0,5)
-    },
+        id:4,
+        question : "WOW",
+        answer : "Mohamed",
+        time:null
+    }
 ] 
 

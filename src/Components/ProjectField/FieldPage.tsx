@@ -25,7 +25,7 @@ const FieldPage = ({index,field,projects} :
                 <h3 onClick={()=>translateShow(field.id,innerWidth)} className="field">{field.title}</h3>
             </div>
             <div className="projects-grid">
-                {projects.map((project,key)=> <Project project={project} key={key}/>)}
+                {projects.map((project,index)=> <Project project={project} key={index}/>)}
             </div>
 
             <div className="img-background">

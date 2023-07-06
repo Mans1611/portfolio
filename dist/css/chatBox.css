@@ -1,0 +1,200 @@
+.chatbox-container {
+  border-radius: 20px;
+  background-color: #17171764;
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+  transition: all 200ms;
+}
+
+.chatbox-container .chat-header {
+  transition: inherit;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 50px;
+  border-bottom: 2px solid #171717;
+  background-color: #e9e9e9;
+  padding: 5px 15px;
+  display: flex;
+  justify-content: center;
+  color: #171717;
+  z-index: 10;
+}
+
+.chatbox-container .chat-header .back-wrapper {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-right: 40px;
+  font-size: 30px;
+  position: absolute;
+  left: 5px;
+}
+
+.chatbox-container .chat-header .conact-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.chatbox-container .chat-header .img-background {
+  overflow: hidden;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #a1a1a1;
+  display: flex;
+  align-items: center;
+}
+
+.chatbox-container .chat-header .img-background img {
+  width: 45px;
+  height: 45px;
+}
+
+.chatbox-container .chat-header .name {
+  font-size: 30px;
+  margin-left: 15px;
+}
+
+.chatbox-container .textfeild {
+  position: sticky;
+  border-top: 1px solid #dddddd;
+  bottom: 0;
+  background-color: #2C333B;
+  padding: 5px 10px;
+  width: 100%;
+  left: 0;
+  height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.chatbox-container .textfeild .suggestMessage {
+  background-color: #fc4545b6;
+  padding: 5px 10px;
+  border-radius: 20px;
+  border: 2px solid #171717;
+  font-size: 19px;
+  color: #ffffff;
+  margin: 2px 4px;
+  cursor: pointer;
+  transition: all 300ms;
+}
+
+.chatbox-container .textfeild .suggestMessage:hover {
+  background-color: #353535;
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+.chatbox-container .message-wrapper {
+  page-break-after: auto;
+  padding: 5px;
+  height: 90%;
+  overflow-y: scroll;
+}
+
+.chatbox-container .message-wrapper::-webkit-scrollbar {
+  background-color: #f5f5f5;
+  width: 5px;
+}
+
+.chatbox-container .message-wrapper::-webkit-scrollbar-thumb {
+  background-color: #464646;
+  border-radius: 5px;
+}
+
+.chatbox-container .message-wrapper::-webkit-scrollbar-thumb:hover {
+  background-color: #333;
+}
+
+.chatbox-container .message-wrapper .qustionanswer {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+}
+
+.chatbox-container .message-wrapper .qustionanswer .time {
+  text-align: right;
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+.chatbox-container .message-wrapper .qustionanswer .question {
+  order: 2;
+  background-color: #d1d1d1;
+  color: #171717;
+  font-size: 22px;
+  right: 0;
+  padding: 5px;
+  border-radius: 5px;
+  width: fit-content;
+  height: fit-content;
+}
+
+.chatbox-container .message-wrapper .qustionanswer .question .time {
+  color: #373737b8;
+}
+
+.chatbox-container .message-wrapper .answer {
+  order: 1;
+  height: fit-content;
+  width: fit-content;
+  max-width: 50%;
+  left: 0;
+  background-color: #fc454591;
+  color: #ffffff;
+  font-size: 22px;
+  padding: 5px;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: all 400ms;
+  visibility: hidden;
+}
+
+.chatbox-container .message-wrapper .answer .time {
+  color: #ffffffaa;
+  text-align: right;
+}
+
+.chatbox-container.dark {
+  background-color: #474747b5;
+}
+
+.chatbox-container.dark .chat-header {
+  background-color: #353535;
+  color: #e9e9e9;
+}
+
+.chatbox-container.dark .chat-header .back-wrapper {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-right: 40px;
+  font-size: 30px;
+}
+
+.chatbox-container.dark .chat-header .img-background {
+  overflow: hidden;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #171717;
+  display: flex;
+  align-items: center;
+}
+
+.chatbox-container.dark .chat-header .img-background img {
+  width: 45px;
+  height: 45px;
+}
+
+.chatbox-container.dark .chat-header .name {
+  font-size: 30px;
+}
+/*# sourceMappingURL=chatBox.css.map */

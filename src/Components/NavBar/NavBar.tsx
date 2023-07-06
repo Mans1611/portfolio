@@ -45,7 +45,6 @@ const NavBar = () => {
       if(activeBox.style !== undefined || linksList[0].getBoundingClientRect()?.width !== undefined){
         
         activeBox.style.width  = (linksList[1].getBoundingClientRect().width as never) as string + 'px'
-        //console.log(((linksList[0].getClientRects() as never) as dim).width)
         activeBox.style.height = (linksList[1].getBoundingClientRect().height as never) as string + 'px'
         
       }
@@ -62,7 +61,6 @@ const NavBar = () => {
         const sideBar = document.getElementById('sidebar')
         if(sideBar?.style){
           sideBar.style.top = `${window.scrollY}px`
-          console.log(window.scrollY)
         }
       },0)
     }

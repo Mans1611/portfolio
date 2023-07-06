@@ -8,7 +8,7 @@ const SkillsSection = () => {
         <div id ='left-bottom' className="circle"></div>
         <h1 className='skills-title'>Skills</h1>
         <div className="skill-grid">
-            {skilllsList.map((skill,index)=> <Skill skill = {skill as skillsInterface}/>
+            {skilllsList.map((skill,index)=> <Skill key={index} skill = {skill as skillsInterface}/>
            )}
         </div>
     </div>

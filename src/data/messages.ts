@@ -1,30 +1,30 @@
 export interface messageInterface{
-    sender : boolean,
-    text: string,
+    question : string,
+    answer: string,
     time : string
 }  
 
 
 export const messages:messageInterface[] = [
     {
-        sender : true,
-        text : "Hello, can you tell me about yourself?",
-        time : "10:38AM"
+        question : "What is your Full Name?",
+        answer : "Manosur Mohamed Manosur Aly Yousef.",
+        time : new Date().toISOString().split('T')[1].slice(0,5)
     },
     {
-        sender : false,
-        text : "I am senior student @ Computer Engineering college in Ain Shams University, I am a junior Full Stack Developer and mid junior Data Science.",
-        time : "10:40AM"
+        question : "How Old Are You?",
+        answer : "I am 21 years old.",
+        time : new Date().toISOString().split('T')[1].slice(0,5)
     },
     {
-        sender : true,
-        text : "What is your specification in Web?",
-        time : "10:42AM"
+        question : "What is your role?",
+        answer : "I am a senior student @ Faculty of Engineering in Ain Shams University, I am also looking for a job or intern, which can deepen my knowledge in both Web and Data Science Field",
+        time : new Date().toISOString().split('T')[1].slice(0,5)
     },
     {
-        sender : false,
-        text : "Design web application on Figma.Develop Full stack web applications (JavaScript-django).",
-        time : "10:43AM"
+        question : "What is your name",
+        answer : "Manosur Mohamed",
+        time : new Date().toISOString().split('T')[1].slice(0,5)
     },
 ] 
 

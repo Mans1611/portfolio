@@ -114,9 +114,10 @@
 
 .home-details .skills-title {
   color: #FC4545;
-  font-size: 42px;
+  font-size: 52px;
   text-align: center;
   margin-bottom: 20px;
+  text-decoration: underline;
 }
 
 .home-details .skill-grid {
@@ -132,18 +133,34 @@
   font-weight: 600;
   background-color: #ffffff;
   margin: 2px;
+  cursor: pointer;
 }
 
 .home-details .skill-tag.web {
   border: 2px solid #d1da36;
 }
 
+.home-details .skill-tag.web.active {
+  background-color: #d1da36;
+  color: #ffffff;
+}
+
 .home-details .skill-tag.data {
   border: 2px solid #439f4c;
 }
 
+.home-details .skill-tag.data.active {
+  background-color: #439f4c;
+  color: #ffffff;
+}
+
 .home-details .skill-tag.design {
   border: 2px solid #FC4545;
+}
+
+.home-details .skill-tag.design.active {
+  background-color: #FC4545;
+  color: #ffffff;
 }
 
 .dark #left {

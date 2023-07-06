@@ -113,9 +113,10 @@ $design-color : #FC4545 ;
 
     .skills-title{
         color: #FC4545;
-        font-size: 42px;
+        font-size: 52px;
         text-align: center;
         margin-bottom: 20px;
+        text-decoration: underline;
     }
     .skill-grid{
         display: flex;
@@ -129,14 +130,27 @@ $design-color : #FC4545 ;
         font-weight: 600;
         background-color: #ffffff;
         margin: 2px;
+        cursor: pointer;
         &.web{
             border: 2px solid $web-color;
+            &.active{
+                background-color: $web-color;
+                color: #ffffff;
+            }
         }
         &.data{
             border: 2px solid $data-color;
+            &.active{
+                background-color: $data-color;
+                color: #ffffff;
+            }
         }
         &.design{
             border: 2px solid $design-color;
+            &.active{
+                background-color: $design-color;
+                color: #ffffff;
+            }
         }
     }
 }

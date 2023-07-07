@@ -1,21 +1,73 @@
+.allconversation-container{
+    display: flex;
+    overflow: hidden;
+    border-radius: 20px;
+    margin: auto;
+    width: 80%;
+    >div{
+        transition: all 300ms ;
+    }
+   .startconv-wrapper{
+        width: 100%;
+        background-color: #2c2c2c;
+        flex: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .img-background{
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            background-color: #fc4545;
+            img{
+                width: 160px;
+                height: 160px;
+                object-fit: contain;
+            }
+        }
+        button{
+            margin: 10px 0;
+            color: #fff;
+            font-size: 26px;
+            font-weight: 500;
+            border-radius: 10px;
+            padding: 5px 15px;
+            background-color: #fc4545;
+            cursor: pointer;
+            transition: all 200ms;
+            border: none;
+            width: 250px;
+            &:hover{
+                transform: scale(1.1);
+                background-color: #171717;
+            }
+        }
+   }
+}
+
 .chatbox-container{
     border-radius: 20px;
-    background-color: #17171764;
+    background-color: #1717178f;
     position: relative;
     height: 300px;
     overflow: hidden;
     transition: all 200ms;
-    
+    width: 100%;
+    margin: auto;
+    flex: none;
     .chat-header{
         transition: inherit;
         width: 100%;
         position: sticky;
         top: 0;
         left: 0;
-        height: 50px;
+        height: 55px;
+
         border-bottom: 2px solid #171717;
         background-color: #e9e9e9;
-        padding: 5px 15px;
+        padding: 6px 15px;
         display: flex;
         justify-content: center;
         color: #171717;
@@ -33,6 +85,8 @@
         .conact-text{
             display: flex;
             flex-direction: column;
+             align-items: center;
+             margin-left: 15px;
         }
         .img-background{
             overflow: hidden;
@@ -48,8 +102,11 @@
             }
         }
         .name{
-            font-size: 30px;
-            margin-left: 15px;
+            font-size: 24px !important;
+          
+        }
+        .typing{
+            margin-top: -5px;
         }
     }
     .textfeild{
@@ -89,7 +146,7 @@
         page-break-after: auto;
         padding: 5px;
         height: 90%;
-       
+        padding-bottom: 50px;
         overflow-y: scroll;
         &::-webkit-scrollbar {
             background-color: #f5f5f5;

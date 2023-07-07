@@ -55,6 +55,20 @@
                 grid-template-columns: repeat(3,33%);
                 grid-gap: 5px;
                 transform: translateX(-30px);
+                &::-webkit-scrollbar {
+                    background-color: #f5f5f5;
+                    width: 5px;
+                  }
+                  
+                  
+                  &::-webkit-scrollbar-thumb {
+                    background-color: #464646;
+                    border-radius: 5px;
+                  }
+                  
+                  &::-webkit-scrollbar-thumb:hover {
+                    background-color: #333;
+                  }
             }  
             .img-background{
                 position: absolute;

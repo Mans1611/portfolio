@@ -2,9 +2,18 @@ import React from 'react'
 import myphoto from '../../assets/manstrans.png';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 const ChatHeader = ({typing}:{typing :boolean}) => {
+  const moveRight = ()=>{
+    const startConv = document.getElementById('startConv');
+    const chat = document.getElementById('chat');
+    if(startConv && chat){
+        startConv.style.transform = 'translateX(0%)';
+        chat.style.transform = 'translateX(0%)';
+    }
+  }
+  
   return (
     <div className='chat-header'>
-        <div className="back-wrapper">
+        <div onClick={moveRight} className="back-wrapper">
             <ArrowBackIosIcon/>
             <span>Back</span>
         </div>

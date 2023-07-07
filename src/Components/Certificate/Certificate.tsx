@@ -10,7 +10,7 @@ const Certificate = () => {
   const {dark} = useContext(appContext);
 
     const [currentCer,setCurrentCer] = useState(certificateStart);
-    
+    console.log(currentCer)
    useEffect(()=>{
         
         const interval = setInterval(()=>{
@@ -44,7 +44,6 @@ const Certificate = () => {
                 circle_blur.style.top = `${event.clientY}px`
                 circle_blur.style.left = `${event.clientX}px`
             }
-
         })
         return ()=> clearInterval(interval);
    },[currentCer])
@@ -60,9 +59,9 @@ const Certificate = () => {
                             <img id='third-slide' src={currentCer.nextCertificate?.nextCertificate?.img}/>
                         </div>
                         <div className="small-pic-container">
-                            <img onClick={()=>setCurrentCer(certificateStart)} className='small-pic' src={certificateStart.img}/>
-                            <img onClick={()=>setCurrentCer(certificateStart.nextCertificate as certifacteInterface)} className='small-pic' src={certificateStart.nextCertificate?.img}/>
-                            <img onClick={()=>setCurrentCer(certificateStart.nextCertificate?.nextCertificate as certifacteInterface)} className='small-pic' src={certificateStart.nextCertificate?.nextCertificate?.img}/>
+                            <img onClick={()=>setCurrentCer(certificateStart)} className={`small-pic ${currentCer.programeName === 'Front End Web Development'? 'active':''}`} src={certificateStart.img}/>
+                            <img onClick={()=>setCurrentCer(certificateStart.nextCertificate as certifacteInterface)} className={`small-pic ${currentCer.programeName === 'Mastering Programming with MATLAB'? 'active':''}`} src={certificateStart.nextCertificate?.img}/>
+                            <img onClick={()=>setCurrentCer(certificateStart.nextCertificate?.nextCertificate as certifacteInterface)} className={`small-pic ${currentCer.programeName === 'Advanced Full Stcak Web'? 'active':''}`} src={certificateStart.nextCertificate?.nextCertificate?.img}/>
                         </div>
                     </div>
                     <div className="description-container">

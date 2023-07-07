@@ -7,7 +7,8 @@ import { appContext } from '../../App';
 import ChatHeader from './ChatHeader';
 import QandA from './QandA';
 import mans from '../../assets/manstrans.png';
-
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+import chat from '../../assets/chat.jpg';
 const typing = (
     x:number,
     setMessages:React.Dispatch<React.SetStateAction<messageInterface[]>>
@@ -51,16 +52,18 @@ const ChatBox = () => {
     }
   return (
     <div className="allconversation-container">
-        <div id='startConv' className="startconv-wrapper">
+        <div style={{backgroundImage:chat}} id='startConv' className="startconv-wrapper">
             <div className="img-background">
                 <img src={mans} alt='mans'/>
             </div>
-            <button onClick={moveRight}>Start Conversation </button>
-
+            <button onClick={moveRight}>
+                Start Conversation
+                <KeyboardArrowRightIcon/>
+             </button>
         </div>
         <div id='chat' className={`chatbox-container ${dark?'dark':''}`}>
             <ChatHeader typing = {typing}/>
-            <div id='message-container' className="message-wrapper">
+            <div style={{backgroundImage:chat}} id='message-container' className="message-wrapper">
                 {sentMsg.map((msg,index)=>
                 <QandA 
                     setTyping = {setTyping}
@@ -68,16 +71,20 @@ const ChatBox = () => {
                     msg = {msg}
                     key={index}/>)}    
             </div>
-            <div className="textfeild">
-            {suggestedMessages.map((message,index)=>
-                <SuggestMessage 
-                    handleSendMessage={handleSendMessage}
-                    id = {message.id} 
-                    question={message.question} 
-                    key = {index}/>
-                )}
-            
-            </div>
+            {
+                suggestedMessages.length !== 0 &&
+
+                <div className="textfeild">
+                {suggestedMessages.map((message,index)=>
+                    <SuggestMessage 
+                        handleSendMessage={handleSendMessage}
+                        id = {message.id} 
+                        question={message.question} 
+                        key = {index}/>
+                    )}
+                
+                </div>
+            }
         </div>
     </div>
   )

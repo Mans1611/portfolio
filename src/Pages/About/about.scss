@@ -5,10 +5,11 @@
         display: grid;
         padding: 20px;
         margin-bottom:  20px ;
-        grid-template-columns: 35% 65%;
+        grid-template-columns: 30% 65%;
         .photo-background{
             overflow: hidden;
-            width: 70%;
+            right: 0;
+            width: 65%;
             margin: auto;
             background-color: #fc4545d0;
             border-radius: 40%;
@@ -36,4 +37,41 @@
         background-color: #011520;
         
     }
+}
+
+
+@media screen and (max-width:1350px) {
+    .about-page{
+       
+        .about-flex-box{
+            grid-template-columns: 35% 65%;
+            .photo-background{
+                width: 75%;
+            }
+            }
+        }
+
+}
+@media screen and (max-width:950px) {
+    .about-page{
+       
+        .about-flex-box{
+            .photo-background{
+                width: 85%;
+            }
+            }
+        }
+
+}
+@media screen and (max-width:760px) {
+    .about-page{
+        .about-flex-box{
+            grid-template-columns: 90%;
+            row-gap: 10px ;
+            .photo-background{
+                width: 55%;
+            }
+            }
+        }
+
 }

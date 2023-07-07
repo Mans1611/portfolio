@@ -25,7 +25,6 @@ const Projects = () => {
             }else{
                 setTimeSpent((time)=>{return {...time,project : Math.round((new Date().getTime() - startTime) /1000)}})  
             }
-            console.log(timeSpent)
         }
     },[])
     

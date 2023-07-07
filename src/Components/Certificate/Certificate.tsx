@@ -10,7 +10,6 @@ const Certificate = () => {
   const {dark} = useContext(appContext);
 
     const [currentCer,setCurrentCer] = useState(certificateStart);
-    console.log(currentCer)
    useEffect(()=>{
         
         const interval = setInterval(()=>{

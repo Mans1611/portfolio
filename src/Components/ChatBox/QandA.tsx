@@ -14,6 +14,9 @@ const QandA = ({msg,typing,setTyping}:
         setTimeout(()=>{
             if(answerdiv.current)
                 answerdiv.current.style.visibility = 'visible'
+            if(msg.hasLinks){
+                answerdiv.current.innerHTML = msg.answer;
+            }
             setTyping(false)
             if(messages_container)
                 messages_container.scrollTo({
@@ -22,6 +25,7 @@ const QandA = ({msg,typing,setTyping}:
                 });
         },900)
     },[])
+    
   return (
     <div className='qustionanswer'>
         <div className="question">

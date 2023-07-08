@@ -7,6 +7,8 @@ import TopProjects from '../../Components/TopProjects/TopProjects';
 import Certificate from '../../Components/Certificate/Certificate';
 import { top3projects } from '../../data/top3projects';
 const About = () => {
+
+  document.title = 'About';
   const {dark} = useContext(appContext);
   useEffect(()=>{
     const top3_project_cards = document.getElementsByClassName('wrapper');
@@ -32,7 +34,7 @@ const About = () => {
     
     },{
       rootMargin:'0px',
-      threshold : 0.4
+      threshold : 0.6
     });
 
     for(let i = 0 ; i < top3_project_cards.length ; i++){

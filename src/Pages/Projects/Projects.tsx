@@ -7,6 +7,7 @@ import { transform } from 'typescript';
 import FieldPage from '../../Components/ProjectField/FieldPage';
 
 const Projects = () => {
+    document.title = 'Projects';
     let {dark,timeSpent,setTimeSpent} = useContext(appContext);
 
     const [activeCard,setActiveCard] = useState({id:"",backgroundColor:""});

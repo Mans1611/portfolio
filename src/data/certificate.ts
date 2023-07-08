@@ -1,7 +1,7 @@
 import matlab from '../assets/matlabcer.png';
 import front from '../assets/front.png';
 import fullst from '../assets/fullstsack.png';
-
+import datalab from '../assets/datalab.png'
 export interface certifacteInterface{
     programeName:string,
     year : number,
@@ -14,7 +14,8 @@ export interface certifacteInterface{
 }
 let certificateStart:certifacteInterface,
     certificate2:certifacteInterface,
-    certificate3:certifacteInterface;
+    certificate3:certifacteInterface,
+    certificate4:certifacteInterface;
 
 certificate2 = {   
     programeName:"Mastering Programming with MATLAB",
@@ -47,10 +48,21 @@ certificate3 = {
     img:fullst,
     description:""
 }
+certificate4 = {   
+    programeName:"Data Science Lab",
+    year : 2023,
+    platform : "WorldQUANT University",
+    source : "WorldQUANT University",
+    link : "https://www.credly.com/badges/bea81d09-c054-4687-bb69-8528ef1f53d6/public_url",
+    nextCertificate : null,
+    img: datalab,
+    description:""
+}
 
 certificateStart.nextCertificate = certificate2;
 certificate2.nextCertificate = certificate3;
-certificate3.nextCertificate = certificateStart;
+certificate3.nextCertificate = certificate4;
+certificate4.nextCertificate = certificateStart;
 export {certificateStart};
 
 

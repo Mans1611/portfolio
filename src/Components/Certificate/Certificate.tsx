@@ -35,7 +35,7 @@ const Certificate = () => {
             }
 
             setCurrentCer((c)=>c.nextCertificate as certifacteInterface);
-        },8000)
+        },6500)
         const certificate = document.getElementById('certificate-view')
         const circle_blur = document.getElementById('blur-circle');
         certificate?.addEventListener('mousemove',(event)=>{
@@ -56,11 +56,13 @@ const Certificate = () => {
                             <img  id='current-slide' src={currentCer.img}/>
                             <img  id='next-slide' src={currentCer.img}/>
                             <img id='third-slide' src={currentCer.nextCertificate?.nextCertificate?.img}/>
+                            <img id='fourth-slide' src={currentCer.nextCertificate?.nextCertificate?.nextCertificate?.img}/>
                         </div>
                         <div className="small-pic-container">
                             <img onClick={()=>setCurrentCer(certificateStart)} className={`small-pic ${currentCer.programeName === 'Front End Web Development'? 'active':''}`} src={certificateStart.img}/>
                             <img onClick={()=>setCurrentCer(certificateStart.nextCertificate as certifacteInterface)} className={`small-pic ${currentCer.programeName === 'Mastering Programming with MATLAB'? 'active':''}`} src={certificateStart.nextCertificate?.img}/>
                             <img onClick={()=>setCurrentCer(certificateStart.nextCertificate?.nextCertificate as certifacteInterface)} className={`small-pic ${currentCer.programeName === 'Advanced Full Stcak Web'? 'active':''}`} src={certificateStart.nextCertificate?.nextCertificate?.img}/>
+                            <img onClick={()=>setCurrentCer(certificateStart.nextCertificate?.nextCertificate?.nextCertificate as certifacteInterface)} className={`small-pic ${currentCer.programeName === 'Data Science Lab'? 'active':''}`} src={certificateStart.nextCertificate?.nextCertificate?.nextCertificate?.img}/>
                         </div>
                     </div>
                     <div className="description-container">

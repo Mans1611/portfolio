@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { projectInterface } from '../../data/projectList'
 import './projectpopup.scss';
 import CloseIcon from '@mui/icons-material/Close';
@@ -7,6 +7,7 @@ import Skill from '../Skill/Skill';
 import { Link } from 'react-router-dom';
 const ProjectPopUp = ({project}:{project:projectInterface}) => {
     
+   const [moreDetails,setMoreDetails] = useState(false);
 
     const {projectPop,setProjectPop} = useContext(appContext);
     const handleClose = ()=>{
@@ -21,10 +22,23 @@ const ProjectPopUp = ({project}:{project:projectInterface}) => {
         if(( (e as HTMLElement).classList.contains('modal')))  
             handleClose();
     }
+    const model_container = document.getElementById('model-container');
+    const handleShow = ():void =>{
+        
+        setMoreDetails(true)
+        setTimeout(()=>{
+
+            model_container?.scrollTo({
+                top : 1900,
+                behavior:'smooth'
+            })
+        },0)
+        
+    }
     
   return (
     <div style={{top:projectPop.top}} onClick={(e)=>close(e.target)} className='modal'>
-        <div className="model-container">
+        <div id='model-container' className="model-container">
             <div onClick={handleClose} className="closeIcon">
                 <CloseIcon/>
             </div>
@@ -42,10 +56,25 @@ const ProjectPopUp = ({project}:{project:projectInterface}) => {
                 </div>
             </div>
             <div className="links-wrapper">
-                { project.link.repo &&
+                { project.link.repo ?
                     <Link className='outer-link' target="_blank" to ={project.link.link}>GitHub Link</Link>
+                    :
+                    <Link className='outer-link' target="_blank" to ={project.link.link}>Link</Link>
                 }
             </div>
+            <div className="links-wrapper">
+                {  project.images &&
+                    <div onClick={handleShow} className='moredetails'>See More Details </div>
+                }
+            </div>
+            { moreDetails &&
+
+                <div className="imgs-cotainer">
+                    {
+                        project.images?.map((img,index)=><img key={index} src={img.imgs} className={`${img.horizental? 'horizental':'vertical'}`}/>)
+                    }
+                </div>
+            }
         </div>
     </div>
   )

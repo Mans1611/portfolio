@@ -10,6 +10,7 @@ import { steps } from '../../data/step';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
+  document.title = 'Home';
   const {
     dark,
     timeSpent,setTimeSpent

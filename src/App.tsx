@@ -59,11 +59,11 @@ function App() {
 
         <div id='app' className="App">
           <Routes>
-          <Route path="/" element={<NavBar/>}>
-            <Route index path='home' element={<Home/>}></Route>  
+          <Route path="/" element={<><NavBar/> </>}>
+            <Route index path='' element={<Home/>}></Route>  
             <Route path='projects' element={<Projects/>}></Route>  
             <Route path='about' element={<About/>}></Route>  
-            <Route path='contact'></Route>
+            
           </Route> 
 
           </Routes>

@@ -29,7 +29,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "move" : "xcopy build\\* mans1611.github.io /s /e",
+    "upload":"cd mans1611.github.io && git add . && git commit -m \"deploying updates\" && git push origin main "
   },
   "eslintConfig": {
     "extends": [

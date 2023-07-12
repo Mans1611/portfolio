@@ -5,10 +5,10 @@ import CloseIcon from '@mui/icons-material/Close';
 import { appContext } from '../../App';
 import Skill from '../Skill/Skill';
 import { Link } from 'react-router-dom';
-const ProjectPopUp = ({project}:{project:projectInterface}) => {
-    
-   const [moreDetails,setMoreDetails] = useState(false);
 
+
+const ProjectPopUp = ({project}:{project:projectInterface}) => {    
+   const [moreDetails,setMoreDetails] = useState(false);
     const {projectPop,setProjectPop} = useContext(appContext);
     const handleClose = ()=>{
         setProjectPop({show:false,project:{},top:window.scrollY});
@@ -49,7 +49,7 @@ const ProjectPopUp = ({project}:{project:projectInterface}) => {
                 <h1 className="poptitle">{project.title}</h1>
                 <h2 className="title">Description</h2>
                 
-                <p className='answer'>{project.description}</p>
+                <p className='project-description'>{project.description}</p>
                 <h2 className="title">Skills</h2>
                 <div className="skills-container">
                     {project.skills.map((skill,key)=><Skill skill={skill} key={key}/>)}

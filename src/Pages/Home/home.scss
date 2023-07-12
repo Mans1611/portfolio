@@ -150,6 +150,30 @@
             row-gap: 20px ;
         }   
     }
+    @media screen and (max-width:560px) {
+        .home-first-wrapper{
+            .half{
+                width: initial;
+                &.picture-wrapper{
+                    order: 1;
+                }
+            }
+           
+            .picture-wrapper{
+                order: 1 !important;
+            }
+            .name-typing{
+                font-size: 35px;
+                .code{
+                    font-size: 40px;
+                }
+                #myname{
+                   
+                    font-size: 40px;
+                }
+            }
+        }  
+    }
 }
 @keyframes slidedown {
     from {

@@ -183,3 +183,55 @@ $design-color : #FC4545 ;
       transform: rotate(360deg);
     }
   }
+
+@media screen and (max-width:540px){
+    .home-details{
+        
+        .info-holder{
+           
+            .info{
+                display: grid;
+                grid-template-columns: 50% 50%;
+            }
+            .info-title{
+                color: #ffffff;
+                font-weight: 700;
+                font-size: 40px !important;
+            }
+            .number{
+                width: 60px;
+                height: 60px;
+                font-size: 50px;
+                &::before , &::after{
+                    width: 60px;
+                    height: 60px;
+                }
+            }
+            h3#experince-label{
+                margin-top: 5px;
+                font-size: 24px;
+            }
+            h3#project-label{
+                margin-top: 5px;
+                font-size: 24px;
+            }
+        }
+        .circle{
+            width: 80px;
+            height: 80px;
+            &#right{
+                right: -40px;
+                top: -40px;
+              
+            }
+        }
+    
+        .skills-title{
+            font-size: 40px;
+        }
+        .skill-tag{
+            border-radius: 10px;    
+        }
+    }
+
+}

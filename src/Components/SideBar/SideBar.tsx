@@ -49,7 +49,7 @@ const SideBar = (props : propsType) => {
                 </div>
                 <div className="links-container">
                     <div className={`link-item ${selctedLink === 'Home'? 'selected-link':''}`}>
-                        <Link onClick={()=>disapper("Home")} to='/home'>Home</Link>
+                        <Link onClick={()=>disapper("Home")} to='/'>Home</Link>
                     </div>
                     <div className={`link-item ${selctedLink === 'Projects'? 'selected-link':''}`}>
                         <Link onClick={()=>disapper("Projects")} to='/projects'>Projects</Link>
@@ -57,9 +57,7 @@ const SideBar = (props : propsType) => {
                     <div className={`link-item ${selctedLink === 'About'? 'selected-link':''}`}>
                         <Link onClick={()=>disapper("About")} to='/about'>About</Link>
                     </div>
-                    <div className={`link-item ${selctedLink === 'Contact'? 'selected-link':''}`}>
-                        <Link onClick={()=>disapper("Contact")} to='/contact'>Contact</Link>
-                    </div>
+                    
                     <div className='link-item theme-wrapper'>
                         <span className='theme' onClick={()=>{setDark(!dark)}}>Theme : {dark ? 'Dark': 'Light'}</span>
                         <span>{dark ? <NightlightIcon/> : <LightModeIcon/>}</span>

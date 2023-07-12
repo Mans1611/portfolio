@@ -3,14 +3,8 @@ import React, { FunctionComponent, useEffect, useState } from 'react'
 const NameTyping = () => {
     const codeTag = "<code></code>";
     const myName = "Manosur Mohamed";
-
-    const hi = `I am `
-    const role = `, I am Full-Stack Web developer & Data Scientist`
-
-  
-    
-    
-
+    const hi = `I am `;
+    const role = `, I am Full-Stack Web developer & Data Scientist`;
     useEffect(()=>{
         let typingInterval:NodeJS.Timeout;
         

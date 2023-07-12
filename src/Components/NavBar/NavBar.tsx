@@ -80,11 +80,10 @@ const NavBar = () => {
         <div id="right-side-navbar">
             <div onClick={(e)=>moveHover(e)} className="nav-links-container">
               <div id='active' className="active"></div>
-                <Link onClick={()=>setSelectedLink("Home")} className={`link ${selctedLink === 'Home'? 'activelink' : ''}`}  to='home'>Home</Link>
+                <Link onClick={()=>setSelectedLink("Home")} className={`link ${selctedLink === 'Home'? 'activelink' : ''}`}  to='/'>Home</Link>
                 <Link onClick={()=>setSelectedLink("Projects")} className={`link ${selctedLink === 'Projects'? 'activelink' : ''}`} to='projects'>Projects</Link>
                 <Link onClick={()=>setSelectedLink("About")} className={`link ${selctedLink === 'About'? 'activelink' : ''}`} to='about'>About</Link>
-                <Link onClick={()=>setSelectedLink("Contact")} className={`link ${selctedLink === 'Contact'? 'activelink' : ''}`} to='contact'>Contact</Link>
-            </div>
+              </div>
                 <div onClick={()=>(setDark(!dark) ) } className="theme-wrapper">
                   {dark?<NightlightIcon/>:<LightModeIcon/>}
               </div>

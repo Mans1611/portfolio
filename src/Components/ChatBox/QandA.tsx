@@ -34,7 +34,7 @@ const QandA = ({msg,typing,setTyping}:
         </div>
         <div ref={answerdiv} className="answer">
             {msg.answer}
-            <div className="time">{msg.time? msg.time.slice(0,5) :''}</div>
+            <div className="time">{msg.time? msg.time.slice(0,5) : ''}</div>
         </div>
         
     </div>

@@ -40,7 +40,7 @@ export const messages:messageInterface[] = [
     {
         id:5,
         question : "How I can contact with you?",
-        answer : `You can contact with my via my linkedin profile <a href='https://www.linkedin.com/in/mansour-yousef-90366b21b/'>My LinkedIn</a>`,
+        answer : `You can contact with my via my linkedin profile <a style='color:#ffffff' target='_blank' href='https://www.linkedin.com/in/mansour-yousef-90366b21b/'>My LinkedIn</a>`,
         time:null,
         hasLinks : true
     },

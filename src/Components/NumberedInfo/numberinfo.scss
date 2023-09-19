@@ -1,17 +1,16 @@
 $web-color : #d1da36;
 $data-color :#439f4c ;
 $design-color : #FC4545 ;
-
-
+@import '../../mainstyle.scss';
 .home-details{
     width: 90%;
     border-radius: 10px;
-    background-color: #dfb99b3e;
+    background-color: #224957b3;
     padding: 10px;
     position: relative;
     overflow: hidden;
     height: fit-content;    
-    margin: auto ;
+    margin: 10px auto ;
     .info-holder{
         display: flex;
         justify-content: space-around;
@@ -20,7 +19,6 @@ $design-color : #FC4545 ;
         .info{
             display: grid;
             grid-template-columns: 50% 50%;
-        
         
         }
         .info-title{
@@ -36,6 +34,8 @@ $design-color : #FC4545 ;
             font-size: 60px;
             position: relative;
             z-index: 10;
+            margin-bottom: 10px ;
+
             &::before , &::after{
                 content: "";
                 position: absolute;
@@ -58,28 +58,26 @@ $design-color : #FC4545 ;
                     margin: auto;
                     padding: 5px 10px;
                     background-color: #323232;
-                   
-                    
                 }
+        }
+        h3{
+            font-size: 32px;
+            margin-top: 10px;
+
         }
         h3#experince-label{
             color: #323232;
-            font-size: 32px;
-            position: relative;
-            z-index: 12;
         }
         h1{
             &#projects{
-               
                 padding: 5px 10px;
-                background-color: #FC4545;
+                background-color: $green;
                 margin: auto;       
                
             }
         }
         h3#project-label{
-            color: #FC4545;
-            font-size: 32px;
+            color: $green;
         }
     }
     .circle{
@@ -93,12 +91,12 @@ $design-color : #FC4545 ;
         &#right{
             right: -40px;
             top: -40px;
-            background-color: #fc4545e0 ;
+            background-color: $green ;
             filter: blur(30px);
         }
         &#left{
             filter: blur(10px);
-            background-color: #323232;
+            background-color: #3232327f;
             bottom: -40px;
             left: -40px;
         }
@@ -106,13 +104,13 @@ $design-color : #FC4545 ;
             filter: blur(10px);
             top: -40px;
             left: -40px;
-            background-color: #fc4545dc;
+            background-color: $green;
 
         }
     }
 
     .skills-title{
-        color: #FC4545;
+        color: $dark-blue;
         font-size: 52px;
         text-align: center;
         margin-bottom: 20px;

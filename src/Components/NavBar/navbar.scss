@@ -1,23 +1,26 @@
+@import '../../mainstyle.scss';
 .navbar{
-    background-color:#3f4538 ;
-    color: #ffffff;
+    background-color: $white ;
+    color: $dark-blue;
     display: flex;
-   
     align-items: center;
     height: 45px;
     overflow: hidden;
     transition: all 300ms;
+    border-bottom: 3px solid $green;
     &.dark{
-        background-color:#131719 ;
+        background-color:$dark-blue;
         transition: all 300ms;
         #right-side-navbar{
             .active{
-                background-color: #FFD700;
+                background-color: $green;
             }
+            color:$white;
             .link{
+                color:$white;
                 &:hover{
-                    color: #272727;
-                    background-color: #FFD700;
+                    color: $white;
+                    background-color: $green;
                     transition: all 300ms;
                 }
                 }
@@ -40,26 +43,23 @@
         .link{
             background-color: transparent;
             padding: 10px;
-            color: #ffffff;
+            color: $dark-blue;
             font-size: 30px;
             position: relative;
             z-index: 5;
             &:hover{
-                color: #272727;
-                background-color: #FFAE6D;
-                
+                color: $white;
+                background-color: $green;
                 transition: all 400ms;
             }
             &.activelink{
-                color: #272727;
+                color: $white ;
 
             }
-            // &:hover{
-            //     transform: ;
-            // }
+           
         }
         .active{
-            background-color: #FFAE6D;
+            background-color: $green;
             position: absolute;
             z-index: 0;
             top: -10px;
@@ -76,7 +76,7 @@
         .burger-wrapper{
             display: block;
             width: 20%;
-            background-color: #272727;
+            background-color: $dark-blue
             svg{
                 font-size: 40px;
                 position: absolute;
@@ -89,17 +89,17 @@
 }
 .top-burger-icon{
     position: fixed;
-    background-color: #e0e0e0;
+    background-color: $white;
     top: 20px;
     right: 30px;
-    color: #171717;
+    color: $dark-blue;
     z-index: 99;
     cursor: pointer;
     font-size: 50px !important;
     border-radius: 10px;
     &.dark{
-        background-color: #171717;
-        color: #e1e1e1 !important;
+        background-color: $dark-blue;
+        color: $white !important;
     }
 }
 

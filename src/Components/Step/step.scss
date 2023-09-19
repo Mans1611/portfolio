@@ -1,10 +1,15 @@
+@import '../../mainstyle.scss';
 .step-container{
     height: fit-content;
-    background-color: #B8D59C;
-    padding: 10px;
+    background-color: $green;
+    &.white-bg{
+        background-color: $white;
+    }
     position: relative;
     overflow: hidden;
-   &.dark{
+    border-bottom: 3px solid #272727;
+   
+    &.dark{
     .flex-container{
         .text-wrapper{
             h1{
@@ -22,6 +27,7 @@
         position: relative;
         z-index: 4;
         .text-wrapper{
+       
             padding: 20px ;
             position: relative;
             z-index: 4;
@@ -29,6 +35,10 @@
                 font-size: 85px;
                 color: #212121;
                 font-weight: 600;
+                color: $green;
+                &.white-title{
+                    color: $white;
+                }
             }
             p{
                 font-size: 35px;
@@ -43,22 +53,25 @@
             flex: 7;
             display: flex;
             justify-content: center;
-           
-            .belt{
-                position: absolute;
-                background-color: #FEEB5E;
-                width: 150%;
-                height: 250px;
-                transform: rotate(55deg);
-                z-index: 3;
+            position: relative;
+            overflow: hidden;
+            &::after{
+                content: " ";
+                z-index: 10;
                 top: 0;
-                left: -30%;
+                bottom: 0;
+                left: 0;
+                width:0 ;
+                height:0 ;
+                position: absolute;
+                
+                   
             }
             img{
                 position: relative;
                 z-index: 4;
-                width: 450px;
-                height: 450px;
+                width:100%;
+                height: 100%;
 
             }
         }

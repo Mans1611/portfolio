@@ -148,8 +148,7 @@
                 border: 2px solid #FF8686;
                 border-radius: 10px;
                 &.horizental{
-                    width: 80%;
-                    height: 300px;
+                    width: 400px;
                     object-fit: contain;
                 }
                 &.vertical{
@@ -169,6 +168,19 @@
     @media screen and (max-width:560px) {
         .model-container{
             width: 85%;
+            .project-details{
+                width: 90% !important;
+            }
+            img{
+                
+                &.horizental{
+                    width: 90% !important; 
+                }
+                &.vertical{
+                    width: 50% !important;
+                    object-fit: contain;
+                }
+            }
         }
         
     }

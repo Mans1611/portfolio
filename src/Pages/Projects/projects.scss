@@ -1,7 +1,6 @@
 .page{
     background-color: #DDFFBB;
     padding: 5px;
-    
     &.dark{
         background-color: #011520;
         .page-title{
@@ -107,12 +106,19 @@
         .projects-wrapper{
             overflow: hidden;
             .projects-container{
+                flex-direction: column;
+                h3{
+                    text-align: center !important;
+                    margin-left: 0 !important;
+                }
                 .side-name{
                     font-size: 28px;
                     cursor: pointer;
                     position: initial;
                     transform: initial;
                     flex: initial;
+                    padding:  5px;
+                    
                 }
                 .projects-grid{
                     margin: 20px auto;

@@ -1,5 +1,6 @@
+@import '../../mainstyle.scss';
 .home-page{
-    background-color: #DDFFBB;
+    background-color: $white;
     min-height: calc(100vh - 50px);
     max-height: fit-content;
     &.dark{
@@ -18,10 +19,13 @@
     }
     .home-first-wrapper{
         display: flex;
-        padding: 50px 0;
+        padding-bottom: 50px ;
         min-height: 380px;
         .half{
             width: 50%;
+        }
+        .first-flex{
+            padding: 10px;
         }
         .name-typing{
             text-align: center;
@@ -35,7 +39,7 @@
             animation : slidedown forwards 150ms linear;
 
             .code{
-                color: #FC4545;
+                color: $green;
                 font-size: 60px;
                 font-weight: 600;
             }
@@ -50,25 +54,26 @@
             flex: 5;
         }
         .pic-background{
-            width: 220px;
-            height: 220px;
-            transform: rotate(45deg);
-            border-radius: 45px;
-            background-color: #181f4b;
-            margin: 30px auto 0;
-            border: 3px solid #171717;
-            display: flex;
-            align-items: center;
-            justify-content: center;   
+            position: relative;
+            &::before{
+                content: " ";
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                top: 0;
+                z-index: 10;
+                //background-image:url('../../assets/waves.svg');
+                transform: rotate(90deg);
+            }
+            img{
+                width: 100%;
+                height: 100%;
+                transform: translateX(20px);
+            }
             overflow: hidden;
         }
-        .my_photo{
-            transform: rotate(-45deg) translateY(40px);
-            width: 85%;
-            height: 100%;
-            border-radius: 10px;
-            
-        }
+        
     }
     .back-dark-box{
         background-color: #222222c5;
@@ -99,9 +104,7 @@
             }
     }
     .details-holder{
-        display: grid;
         min-height: 200px;
-        grid-template-columns: 60% 40%;
         padding-bottom: 15px;
     }
     @media screen and (max-width:760px) {
@@ -192,7 +195,7 @@
     padding: 5px 30px;
     border-radius: 10px;
     color: #ffffff;
-    background-color: #FC4545;
+    background-color: $green;
     text-decoration: none;
     font-size: 55px;
     font-weight: 600;

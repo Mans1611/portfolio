@@ -1,6 +1,6 @@
 .certificate-view{
     min-height: 100vh;
-    background-color: #dca9a99e ;
+    background-color: #279860 ;
     position: relative;
     #blur-circle{
         position: absolute;
@@ -89,7 +89,7 @@
     }
 
     &.dark{
-        background-color: #1e303a;
+        background-color: #011520;
     
         .title{
             color: #f1f1f1;
@@ -102,7 +102,8 @@
        
         
         .description-container{
-            background-color: #011520;
+            background-color: #152f3d;
+            border: 2px solid #ffffff;
             
             h2{
                  color: #fff;

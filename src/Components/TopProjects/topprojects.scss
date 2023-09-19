@@ -1,11 +1,11 @@
 $design-color : #fc4545;
 $web-color : #d1da36;
 $data-color :#439f4c;
-
+@import '../../mainstyle.scss';
 .top-projects{
     min-height:100vh;
     padding: 10px;
-    background-color: #ff474777;
+    background-color: #4de599ba;
     transition: all 400ms;
     border-bottom-right-radius: 0 !important;
     border-bottom-left-radius: 0 !important;
@@ -15,7 +15,7 @@ $data-color :#439f4c;
         font-size: 80px;
         text-align: center;
         &::selection{
-            background-color: #fc4545;
+            background-color: $green;
             color: #272727;
         }
     }
@@ -142,7 +142,7 @@ $data-color :#439f4c;
         a{
             padding: 10px 30px;
             border-radius: 10px;
-            background-color: #fc4545;
+            background-color: $green;
             color: #ffffff;
             text-decoration: none;
             font-size: 50px;
@@ -174,13 +174,13 @@ $data-color :#439f4c;
     .top-projects{
         background-color: #292929c8;
         h1{
-            color: #fc4545;
+            color: $green;
         }
 
         .navto-projects{
             a{
                 .gray{
-                    background-color: #00899c;
+                    background-color: $dark-blue;
                 
                 }
                 

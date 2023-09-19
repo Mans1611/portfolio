@@ -7,8 +7,7 @@
     }
     position: relative;
     overflow: hidden;
-    border-bottom: 3px solid #272727;
-   
+    
     &.dark{
     .flex-container{
         .text-wrapper{
@@ -74,6 +73,12 @@
                 height: 100%;
 
             }
+        }
+    }
+    &:last-child{
+        &.dark{
+            background-color: $dark-blue;
+            color: $white;
         }
     }
     

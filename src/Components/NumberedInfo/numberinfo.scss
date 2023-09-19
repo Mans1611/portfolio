@@ -163,6 +163,7 @@ $design-color : #FC4545 ;
             color: #171717 !important;
             
         }
+
         h3#experince-label{
             color: #e8e8e8 !important;
         }
@@ -170,7 +171,12 @@ $design-color : #FC4545 ;
     .skill-tag{
         background-color: #212121;
         color: #f7f7f7;
-}
+    }  
+    .skills-title{
+        color: $white;    
+    }
+           
+        
 }
 
 @keyframes rotate {

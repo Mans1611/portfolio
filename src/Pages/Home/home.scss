@@ -26,6 +26,7 @@
         }
         .first-flex{
             padding: 10px;
+            flex:7;
         }
         .name-typing{
             text-align: center;
@@ -55,6 +56,12 @@
         }
         .pic-background{
             position: relative;
+            flex:5;
+            .waves-vertical{
+                position: absolute;
+                left: 0;
+                z-index: 10;
+            }
             &::before{
                 content: " ";
                 position: absolute;

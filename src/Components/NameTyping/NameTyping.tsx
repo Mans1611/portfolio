@@ -68,7 +68,7 @@ const NameTyping = () => {
                         codeend.innerText = typedendCode;
                     }
                 } 
-            },100)
+            },70)
         }
 
         return ()=> clearInterval(typingInterval);

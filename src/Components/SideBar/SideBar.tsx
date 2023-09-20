@@ -3,7 +3,7 @@ import '../NavBar/navbar.scss';
 import { appContext } from '../../App';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import { Link } from 'react-router-dom';
-
+import Logo from '../../assets/fullLogo.png';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import NightlightIcon from '@mui/icons-material/Nightlight';
 
@@ -44,9 +44,6 @@ const SideBar = (props : propsType) => {
                     <KeyboardArrowRightIcon className='disappericon' onClick = {()=>disapper(null)}/>
                 </div>
 
-                <div className="protofolio-title">
-                    <h1>Mansour's Portfolio</h1>
-                </div>
                 <div className="links-container">
                     <div className={`link-item ${selctedLink === 'Home'? 'selected-link':''}`}>
                         <Link onClick={()=>disapper("Home")} to='/'>Home</Link>
@@ -62,6 +59,9 @@ const SideBar = (props : propsType) => {
                         <span className='theme' onClick={()=>{setDark(!dark)}}>Theme : {dark ? 'Dark': 'Light'}</span>
                         <span>{dark ? <NightlightIcon/> : <LightModeIcon/>}</span>
                     </div>
+                </div>
+                <div className="logo">
+                    <img src={Logo} alt="Logo" srcSet=''/>
                 </div>
             </div>
         </div>

@@ -40,17 +40,17 @@ const Home = () => {
         <div className="home-first-wrapper">
           <div className="first-flex">
             <NameTyping/>
+            
+            <div className="details-holder">
+              <NumberedInfo/>
+              <SkillsSection/>
+            </div>
             <div className="resume-container">
               <Link target='_blank' className='resumeLink' to = 'https://drive.google.com/file/d/18u9LaHky_GIakpbbL9RednELUGsC07CB/view?usp=sharing'>
                 <div className="gray"></div>
                 My Resume
               </Link>
             </div>
-            <div className="details-holder">
-              <NumberedInfo/>
-              <SkillsSection/>
-            </div>
-            
           </div>
           <div className="pic-background">
             <svg className='waves-vertical' width="111" height="832" viewBox="0 0 111 832" fill="none" xmlns="http://www.w3.org/2000/svg">

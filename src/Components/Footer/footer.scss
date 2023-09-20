@@ -6,26 +6,23 @@
             background-color: $dark-blue !important;
 
         }
-    
-}
-.footer{
-    padding: 20px 50px;
-    background-color: $green;
-    .waves-horizental{
-        width: 100%;
-        margin-bottom: -4px !important;
-    }
-   
-
-    
-    .footer-title{
-        color: $white;
-        font-size: 80px;
-    }
-    // &.dark{
-    //     background-color: $dark-blue;
-    //     .footer-title{
-    //         color: $green;
-    //     }
-    // }
+        .waves-horizental{
+            width: 100%;
+            height: 100%;
+            margin-bottom: -5px;
+        }
+        .footer{
+            padding: 20px 50px;
+            background-color: $green;
+            .titles{
+                margin-top: -20px;
+            }
+            h3{
+                font-size: 22px;
+                color:$white;
+            }
+        
+            
+            
+        }
 }

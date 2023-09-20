@@ -88,11 +88,6 @@
         .flex-container{
             .img-wrapper{
                 flex: 6 !important;
-                img{
-                    width: 350px;
-                    height: 350px;
-    
-                }
                
             }
             .text-wrapper{
@@ -117,13 +112,10 @@
             flex-direction: column;
             .img-wrapper{
                 order:1;
+                display: block;
                 img{
-                    width: 350px;
-                    height: 350px;
-    
-                }
-                .belt{
-                    display: none;
+                    border-radius: 5px;
+                    height: 300px;
                 }
             }
             .text-wrapper{

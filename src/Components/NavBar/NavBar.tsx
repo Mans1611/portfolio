@@ -6,6 +6,8 @@ import SideBar from '../SideBar/SideBar';
 import { appContext } from '../../App';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import NightlightIcon from '@mui/icons-material/Nightlight';
+import manslogo from '../../assets/Manslogo.png'
+
 const NavBar = () => {
   
   const [showSidebar,setShowSidebar] = useState(false);
@@ -76,7 +78,13 @@ const NavBar = () => {
   return (
     <>
     <div className={`navbar ${dark? 'dark':''}`}>
-        <div id="left-side-navbar"></div>
+        <div id="left-side-navbar">
+          <div className="logo-container">
+            <Link onClick={()=>setSelectedLink("Home")} to='/'>
+              <img src={manslogo}/>
+            </Link>
+          </div>
+        </div>
         <div id="right-side-navbar">
             <div onClick={(e)=>moveHover(e)} className="nav-links-container">
               <div id='active' className="active"></div>
@@ -93,7 +101,6 @@ const NavBar = () => {
         </div>
     </div>
     <Outlet/>
-    {showburger && <Menu  onClick={handleShowSideBar}  className={`top-burger-icon ${dark?'dark':''}`}/>}
     {showSidebar && <SideBar 
                     setShowSidebar = {setShowSidebar}/>}
     </>

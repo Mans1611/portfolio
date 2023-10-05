@@ -5,11 +5,10 @@ import ProjectCard from '../../Components/ProjectCard/ProjectCard';
 import { workingFields } from '../../data/projectList';
 import { transform } from 'typescript';
 import FieldPage from '../../Components/ProjectField/FieldPage';
-
+import cloud from '../../assets/cloudicon.png';
 const Projects = () => {
     document.title = 'Projects';
     let {dark,timeSpent,setTimeSpent} = useContext(appContext);
-
     const [activeCard,setActiveCard] = useState({id:"",backgroundColor:""});
    
     useEffect(()=>{
@@ -36,6 +35,7 @@ const Projects = () => {
         <div className="page-title">
             <h1>My Projects</h1>
         </div>
+        <img id='cloudicon' src={cloud} alt="cloud" />
         <div className="projects-cards-container">
             {
                 workingFields.map((field,id)=>

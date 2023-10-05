@@ -12,8 +12,8 @@ import Footer from './Components/Footer/Footer';
 export interface props {
   dark : boolean | string| null,
   setDark : React.Dispatch<React.SetStateAction<boolean>>,
-  projectPop : {show:boolean,project:object,top:number},
-  setProjectPop:React.Dispatch<React.SetStateAction<{show:boolean,project:{},top:number}>>,
+  projectPop : {show:boolean,project:object,height:number},
+  setProjectPop:React.Dispatch<React.SetStateAction<{show:boolean,project:{},height:number}>>,
   selctedLink:string,
   setSelectedLink: React.Dispatch<React.SetStateAction<string>>
   innerWidth : number,
@@ -22,7 +22,7 @@ export interface props {
 
 const obj:props = {
   dark:null,setDark:()=>{},
-  projectPop : {show:false,project:{},top:window.scrollY},
+  projectPop : {show:false,project:{},height:window.innerHeight},
   setProjectPop : ()=>{},
   selctedLink: "",
   setSelectedLink:()=>{},
@@ -36,7 +36,7 @@ export const appContext = createContext(obj);
 
 function App() {
   const [dark,setDark] = useState(false);
-  const [projectPop,setProjectPop] = useState({show:false,project:{},top:window.scrollY});
+  const [projectPop,setProjectPop] = useState({show:false,project:{},height:window.innerHeight});
   const [innerWidth] = useState(window.innerWidth)
   const [selctedLink,setSelectedLink] = useState("Home");
 
@@ -57,7 +57,7 @@ function App() {
         timeSpent,setTimeSpent,
         innerWidth
       }}>
-
+        
         <div id='app' className="App">
           <Routes>
           <Route path="/" element={<><NavBar/> <Footer/></>}>

@@ -8,10 +8,10 @@ import { Link } from 'react-router-dom';
 
 
 const ProjectPopUp = ({project}:{project:projectInterface}) => {    
-   const [moreDetails,setMoreDetails] = useState(false);
+    const [moreDetails,setMoreDetails] = useState(false);
     const {projectPop,setProjectPop} = useContext(appContext);
     const handleClose = ()=>{
-        setProjectPop({show:false,project:{},top:window.scrollY});
+        setProjectPop({show:false,project:{},height:window.innerHeight});
         const app = document.getElementsByTagName('body')[0]
         if(app?.style)
             app.style.overflow = 'auto' 
@@ -37,7 +37,7 @@ const ProjectPopUp = ({project}:{project:projectInterface}) => {
     }
     
   return (
-    <div style={{top:projectPop.top}} onClick={(e)=>close(e.target)} className='modal'>
+    <div style={{height:projectPop.height}} onClick={(e)=>close(e.target)} className='modal'>
         <div id='model-container' className="model-container">
             <div onClick={handleClose} className="closeIcon">
                 <CloseIcon/>

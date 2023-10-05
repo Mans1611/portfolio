@@ -12,19 +12,19 @@ const Step = ({step}:{step:stepsInterface}) => {
                 step.rightImg ? 
                 (
                     <>
-                    <div className="text-wrapper">
-                        <h1 className='white-title'>{step.title}</h1>
-                        <p>{step.para}</p>
-                    </div>
-                    <div className="img-wrapper">
-                        <img src={step.img}  />
-                    </div>
+                        <div className="text-wrapper">
+                            <h1 className='white-title'>{step.title}</h1>
+                            <p>{step.para}</p>
+                        </div>
+                        <div className="img-wrapper">
+                            <img style={{borderTopRightRadius:0,borderBottomRightRadius:0}} src={step.img}  />
+                        </div>
                     </>
                 ):
                 (
                     <>
                         <div className="img-wrapper">
-                              <img src={step.img} />
+                              <img style={{borderTopLeftRadius:0,borderBottomLeftRadius:0}} src={step.img} />
                         </div>
                         <div className="text-wrapper">
                             <h1 className='green-title'>{step.title}</h1>

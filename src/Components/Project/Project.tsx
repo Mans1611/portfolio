@@ -10,9 +10,9 @@ const Project = ({project}:{project:projectInterface}) => {
 
     const {projectPop,setProjectPop} = useContext(appContext);
     const modalOpen = ()=>{
-        const top = Math.floor(window.scrollY);
+        const height = Math.floor(window.innerHeight);
 
-        setProjectPop({show:true,project:project,top:top})
+        setProjectPop({show:true,project:project,height:height})
         const app = document.getElementsByTagName('body')[0]
         if(app?.style)
             app.style.overflow = 'hidden'

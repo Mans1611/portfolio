@@ -8,7 +8,8 @@ import SkillsSection from '../../Components/Skill/SkillsSection';
 import Step from '../../Components/Step/Step';
 import { steps } from '../../data/step';
 import { Link } from 'react-router-dom';
-import waves from '../../assets/wave.png';
+import ContactMe from '../../Components/ContactMe/ContactMe';
+
 const Home = () => {
   document.title = 'Home';
   const {
@@ -40,18 +41,21 @@ const Home = () => {
         <div className="home-first-wrapper">
           <div className="first-flex">
             <NameTyping/>
-            
             <div className="details-holder">
               <NumberedInfo/>
               <SkillsSection/>
             </div>
+            <ContactMe/>
             <div className="resume-container">
               <Link target='_blank' className='resumeLink' to = 'https://drive.google.com/file/d/18u9LaHky_GIakpbbL9RednELUGsC07CB/view?usp=sharing'>
                 <div className="gray"></div>
                 My Resume
               </Link>
             </div>
+
+            
           </div>
+          
           <div className="pic-background">
             <svg className='waves-vertical' width="111" height="832" viewBox="0 0 111 832" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M111 0L106.829 34.45C102.659 69.55 94.3179 138.45 80.2023 208C65.7659 277.55 45.2341 346.45 41.0636 416C36.8931 485.55 49.4046 554.45 53.2543 624C57.4249 693.55 53.2543 762.45 51.3295 797.55L49.4046 832H0V797.55C0 762.45 0 693.55 0 624C0 554.45 0 485.55 0 416C0 346.45 0 277.55 0 208C0 138.45 0 69.55 0 34.45V0L111 0Z" fill="#20DF7F" fill-opacity="0.8"/>
@@ -61,9 +65,7 @@ const Home = () => {
           </div> 
         </div>
         
-       <Step step={steps[0]}/>
-       <Step step={steps[1]}/>
-       
+        {steps.map((step,index)=><Step key={index} step={step}/>)}
     </div>
   )
 }

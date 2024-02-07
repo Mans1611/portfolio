@@ -20,7 +20,6 @@ const Project = ({project}:{project:projectInterface}) => {
   return (
     <>
         <div className='project-holder'>
-            
             <div className="img-wrapper">
                 <img className='project-img' src={project.projectImg} />
             </div>

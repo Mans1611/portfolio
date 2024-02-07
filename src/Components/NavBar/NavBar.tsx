@@ -18,7 +18,7 @@ const NavBar = () => {
   } = useContext(appContext);
   
     const [showburger,setShowBurger] = useState(false);
-    console.log(window.scrollY)
+    
 
   const moveHover = (e: any)=>{
       const activeBox: (HTMLElement | null) = document.getElementById('active');

@@ -10,6 +10,7 @@ import { Link } from 'react-router-dom';
 const ProjectPopUp = ({project}:{project:projectInterface}) => {    
     const [moreDetails,setMoreDetails] = useState(false);
     const {projectPop,setProjectPop} = useContext(appContext);
+    
     const handleClose = ()=>{
         setProjectPop({show:false,project:{},height:window.innerHeight});
         const app = document.getElementsByTagName('body')[0]
@@ -17,17 +18,14 @@ const ProjectPopUp = ({project}:{project:projectInterface}) => {
             app.style.overflow = 'auto' 
     }
 
-    
     const close = (e: EventTarget ) :void=>{
         if(( (e as HTMLElement).classList.contains('modal')))  
             handleClose();
     }
     const model_container = document.getElementById('model-container');
     const handleShow = ():void =>{
-        
         setMoreDetails(true)
         setTimeout(()=>{
-
             model_container?.scrollTo({
                 top : 1900,
                 behavior:'smooth'
@@ -37,7 +35,8 @@ const ProjectPopUp = ({project}:{project:projectInterface}) => {
     }
     
   return (
-    <div style={{height:projectPop.height}} onClick={(e)=>close(e.target)} className='modal'>
+    <div style={{top:window.scrollY,bottom:window.scrollY,height:projectPop.height}} 
+        onClick={(e)=>close(e.target)} className='modal'>
         <div id='model-container' className="model-container">
             <div onClick={handleClose} className="closeIcon">
                 <CloseIcon/>

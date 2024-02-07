@@ -35,7 +35,7 @@ export const appContext = createContext(obj);
 
 
 function App() {
-  const [dark,setDark] = useState(false);
+  const [dark,setDark] = useState(true);
   const [projectPop,setProjectPop] = useState({show:false,project:{},height:window.innerHeight});
   const [innerWidth] = useState(window.innerWidth)
   const [selctedLink,setSelectedLink] = useState("Home");

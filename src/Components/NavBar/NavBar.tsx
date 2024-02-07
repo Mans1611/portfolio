@@ -18,7 +18,7 @@ const NavBar = () => {
   } = useContext(appContext);
   
     const [showburger,setShowBurger] = useState(false);
-
+    console.log(window.scrollY)
 
   const moveHover = (e: any)=>{
       const activeBox: (HTMLElement | null) = document.getElementById('active');
@@ -92,9 +92,7 @@ const NavBar = () => {
                 <Link onClick={()=>setSelectedLink("Projects")} className={`link ${selctedLink === 'Projects'? 'activelink' : ''}`} to='projects'>Projects</Link>
                 <Link onClick={()=>setSelectedLink("About")} className={`link ${selctedLink === 'About'? 'activelink' : ''}`} to='about'>About</Link>
               </div>
-                <div onClick={()=>(setDark(!dark) ) } className="theme-wrapper">
-                  {dark?<NightlightIcon/>:<LightModeIcon/>}
-              </div>
+                
         </div>
         <div className="burger-wrapper">
           <Menu onClick={handleShowSideBar}/>

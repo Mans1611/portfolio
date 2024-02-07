@@ -1,7 +1,7 @@
 import  { useContext, useEffect } from 'react'
 import './home.scss'
 import NameTyping from '../../Components/NameTyping/NameTyping'
-import Mans from '../../assets/manstrans.jpg';
+import Mans from '../../assets/mans.jpg';
 import { appContext } from '../../App';
 import NumberedInfo from '../../Components/NumberedInfo/NumberedInfo';
 import SkillsSection from '../../Components/Skill/SkillsSection';

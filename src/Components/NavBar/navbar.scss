@@ -9,7 +9,7 @@
     transition: all 300ms;
     border-bottom: 3px solid $green;
     position: fixed;
-    z-index: 30;
+    z-index: 989;
     width: 100%;
     #left-side-navbar{
         padding-left: 50px;
@@ -173,10 +173,26 @@
             }
         }
     }
+    .logo{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background-color: $white;
+        border-radius: 50%;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        border-top: 5px solid $white;
+        
+    }
     
     &.dark{
         background-color: #052D43;
-        
+        .logo{
+            background-color: $green;
+        }
         .links-container{
             .link-item{
                 &.selected-link{
@@ -188,20 +204,7 @@
                 }
             }
         }
-        .logo{
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            background-color: $green;
-            border-radius: 50%;
-            border-bottom-left-radius: 0;
-            border-bottom-right-radius: 0;
-            padding: 10px;
-            display: flex;
-            justify-content: center;
-            border-top: 5px solid $white;
-            
-        }
+        
     }
 }
 @keyframes apper{

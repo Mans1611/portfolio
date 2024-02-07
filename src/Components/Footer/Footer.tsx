@@ -4,12 +4,10 @@ import './footer.scss';
 import { appContext } from '../../App';
 import { useLocation, useParams } from 'react-router-dom';
 const Footer = () => {
-    const {
-        dark
-      } = useContext(appContext);
+    const {dark} = useContext(appContext);
       
       const {pathname} = useLocation()
-      console.log(pathname);
+      
 
   return (
     <div className={`footer-container ${dark?'dark':''}`}

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import  { useContext, useState } from 'react'
 import { projectInterface } from '../../data/projectList'
 import './projectpopup.scss';
 import CloseIcon from '@mui/icons-material/Close';
@@ -45,6 +45,7 @@ const ProjectPopUp = ({project}:{project:projectInterface}) => {
                 <img src={project.projectImg} />
             </div>
             <div className="project-details">
+                <div className={`project-status ${project.status}`}>{project.status}</div>
                 <h1 className="poptitle">{project.title}</h1>
                 <h2 className="title">Description</h2>
                 

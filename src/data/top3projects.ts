@@ -1,6 +1,5 @@
 
 import messi from '../assets/messi.jpeg';
-import commerce from '../assets/ecommerce.png';
 import design from '../assets/design.jpg';
 import pl from '../assets/pl.jpg';
 

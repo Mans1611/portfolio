@@ -4,8 +4,6 @@ import { appContext } from '../../App';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import { Link } from 'react-router-dom';
 import Logo from '../../assets/fullLogo.png';
-import LightModeIcon from '@mui/icons-material/LightMode';
-import NightlightIcon from '@mui/icons-material/Nightlight';
 
 interface propsType {
     setShowSidebar: Dispatch<SetStateAction<boolean>>
@@ -53,11 +51,6 @@ const SideBar = (props : propsType) => {
                     </div>
                     <div className={`link-item ${selctedLink === 'About'? 'selected-link':''}`}>
                         <Link onClick={()=>disapper("About")} to='/about'>About</Link>
-                    </div>
-                    
-                    <div className='link-item theme-wrapper'>
-                        <span className='theme' onClick={()=>{setDark(!dark)}}>Theme : {dark ? 'Dark': 'Light'}</span>
-                        <span>{dark ? <NightlightIcon/> : <LightModeIcon/>}</span>
                     </div>
                 </div>
                 <div className="logo">

@@ -26,7 +26,19 @@ export const skilllsList:skillsInterface[] = [
         field : "web"
     },
     {
+        skill : "PineCone",
+        field : null
+    },
+    {
+        skill : "Docker",
+        field : null
+    },
+    {
         skill : "Pandas",
+        field : "data"
+    },
+    {
+        skill : "NumPy",
         field : "data"
     },
     {

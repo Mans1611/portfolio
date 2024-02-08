@@ -17,7 +17,7 @@
         margin-top: 5px;
         h2{
             color: #DA3653;
-            font-size: 26px;
+            font-size: 30px;
             text-align: center;
         }
     }
@@ -40,6 +40,12 @@
             font-size: 30px;
             background-color: #173241;
             color: #D1DA36;
+            transition: all 100ms;
+            &:hover{
+                color: #ffffff;
+                background-color: #171717;
+
+            }
         }
     }
 }

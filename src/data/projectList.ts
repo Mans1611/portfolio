@@ -43,6 +43,10 @@ import portdesign3 from '../assets/portfoliodesign/port3.png';
 import portdesign4 from '../assets/portfoliodesign/port4horz.png';
 import portdesign5 from '../assets/portfoliodesign/port6horz.png';
 import portdesign6 from '../assets/portfoliodesign/portfolio5.png';
+import aws from '../assets/aws.png';
+import docker from '../assets/docker.png';
+import soalak from '../assets/studing.jpg';
+
 export interface projectInterface {
     title:string,
     skills : {skillsName:string,icon:string}[],
@@ -51,6 +55,7 @@ export interface projectInterface {
     teamWork : boolean,
     projectImg:string,
     type:string | null,
+    status : 'Done' | 'OnGoing',
     images : {imgs:string,horizental:boolean}[] | null
 }
 
@@ -86,6 +91,7 @@ export const workingFields:feildsInterface[] = [
                 projectImg : portfolio,
                 description :"Design my personal portfolio with which holds my personal projects and experince in Design, Web Development and Data Science",
                 teamWork : false,
+                status : 'Done',
                 images : [
 
                     {imgs:portdesign1,horizental:false},
@@ -108,6 +114,7 @@ export const workingFields:feildsInterface[] = [
                 projectImg : formdesign,
                 description :"Design the Sign up and login form component for custex using Figma or also Ligh and Dark modes, which increase te users experince and he users liked it",
                 teamWork : false,
+                status : 'Done',
                 images : [
                     
                     {imgs:form1,horizental:true},
@@ -123,6 +130,7 @@ export const workingFields:feildsInterface[] = [
                 title:"Expect (FIFA World Cup Game)",
                 link : {repo:false,link:"" },
                 type:"",
+                status : 'Done',
                 skills : [
                     {skillsName:"Figma",icon:figma},
                 ],
@@ -156,6 +164,7 @@ export const workingFields:feildsInterface[] = [
                     {skillsName:"Redux.JS",icon:redux},
                     {skillsName:"Mongo.JS",icon:mongo},
                 ],
+                status : 'Done',
                 projectImg : messi,
                 description :"Virtual Game like Fantasy Premier League, but it was meant for World Cup in 2022, the game is virtual game, you expect match winner, the result of that game and finally your star players.Depends on your Exception you collect points and you compete with your friends and all other players. You can create a team of 5 players and compete with other teams, your team's points will be gathered for all the players.",
                 teamWork : false,
@@ -189,6 +198,7 @@ export const workingFields:feildsInterface[] = [
                     {skillsName:"Node.JS",icon:node},
                     {skillsName:"TypeScript",icon:typescript},
                 ],
+                status : 'Done',
                 projectImg : portfolio,
                 description :"My personal portfolio which display my personal projects and experince in both Web Developemnt and Data Science.",
                 teamWork : false,
@@ -204,10 +214,29 @@ export const workingFields:feildsInterface[] = [
                     {skillsName:"TypeScript.JS",icon:typescript},
                     {skillsName:"Express.JS",icon:express},
                     {skillsName:"PostgreSQL",icon:sql},
+                    {skillsName:"AWS",icon:aws},
                 ],
+                status : 'Done',
                 projectImg : commerce,
                 description :"Fully Back end stystem for Store, providing authntication and autorization by JWT, you can create account and start to buy items from the store. All CRUD are provided in this backend system like POST,GET PUT, and DELETE. PostgreSQL was used as a database mangment system (DBMS)",
                 teamWork : false,
+                images : null,
+            },
+            {
+                title:"So?alak",
+                link : {repo:false,link:"https://github.com/Mans1611/So2alak"},
+                type:"Full Stack",
+                skills : [
+                    {skillsName:"React.JS",icon:react},
+                    {skillsName:"Node.JS",icon:node},
+                    {skillsName:"Express.JS",icon:express},
+                    {skillsName:"PostgreSQL",icon:sql},
+                    {skillsName:"Docker",icon:docker},
+                ],
+                status : 'OnGoing',
+                projectImg : soalak,
+                description :"A college-system sharable information community between the students related to their courses, by creating a bridge between professors and students. The professors are to be on a platform and answer, reply to, and verify students’ answers.",
+                teamWork : true,
                 images : null,
             },
 

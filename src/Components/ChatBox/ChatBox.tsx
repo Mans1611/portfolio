@@ -1,7 +1,5 @@
 import React, { useContext, useState } from 'react';
-import EmojiEmotionsIcon from '@mui/icons-material/EmojiEmotions';
 import { messageInterface, messages } from '../../data/messages';
-import TextMessage from '../TextMessage/TextMessage';
 import './chatBox.scss';
 import { appContext } from '../../App';
 import ChatHeader from './ChatHeader';

@@ -9,6 +9,7 @@ import Step from '../../Components/Step/Step';
 import { steps } from '../../data/step';
 import { Link } from 'react-router-dom';
 import ContactMe from '../../Components/ContactMe/ContactMe';
+import TimeLine from '../../Components/TimeLine/TimeLine';
 
 const Home = () => {
   document.title = 'Home';
@@ -47,7 +48,7 @@ const Home = () => {
             </div>
             <ContactMe/>
             <div className="resume-container">
-              <Link target='_blank' className='resumeLink' to = 'https://drive.google.com/file/d/18u9LaHky_GIakpbbL9RednELUGsC07CB/view?usp=sharing'>
+              <Link target='_blank' className='resumeLink' to = 'https://drive.google.com/file/d/10GQI6Zq4yIzbrrIrFZr1rcxR6HCc-luz/view?usp=sharing'>
                 <div className="gray"></div>
                 My Resume
               </Link>
@@ -64,6 +65,7 @@ const Home = () => {
            <img src={Mans} alt="Mans" /> 
           </div> 
         </div>
+        <TimeLine/>
         
         {steps.map((step,index)=><Step key={index} step={step}/>)}
     </div>

@@ -1,3 +1,4 @@
+@import '../../mainstyle.scss';
 .modal{
     position: absolute;
     width: 100%;
@@ -63,6 +64,27 @@
             position: relative;
             margin-top: -90px;
             z-index: 6;
+            .project-status{
+                position: absolute;
+                top: 10px;
+                right: 20px;
+                &.Done,&.OnGoing{
+                    border-radius: 10px;
+                    padding: 5px;
+                    font-size: 24px;
+                    font-weight: 700;
+                }
+                &.Done{
+                    background-color: #0083009a;
+                    color: #ffffff;
+                }
+                &.OnGoing{
+                    background-color: #fff700df;
+                    color: #171717;
+                    animation: blinking 1500ms infinite forwards alternate;
+                    
+                }
+            }
             .poptitle{
                 padding: 10px auto ;
                 text-align: center;
@@ -184,5 +206,12 @@
             }
         }
         
+    }
+}
+@keyframes blinking {
+    from{
+        opacity: 1;
+    }to{
+        opacity: 0.2;
     }
 }

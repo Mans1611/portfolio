@@ -48,7 +48,7 @@ const Home = () => {
             </div>
             <ContactMe/>
             <div className="resume-container">
-              <Link target='_blank' className='resumeLink' to = 'https://drive.google.com/file/d/10GQI6Zq4yIzbrrIrFZr1rcxR6HCc-luz/view?usp=sharing'>
+              <Link target='_blank' className='resumeLink' to = 'https://drive.google.com/file/d/1Sw103jw-YpqNaKSBhefPUcCtrEnb7T0Z/view?usp=sharing'>
                 <div className="gray"></div>
                 My Resume
               </Link>

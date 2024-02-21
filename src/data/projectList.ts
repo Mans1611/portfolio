@@ -56,7 +56,7 @@ export interface projectInterface {
     projectImg:string,
     type:string | null,
     status : 'Done' | 'OnGoing',
-    images : {imgs:string,horizental:boolean}[] | null
+    images : {imgs:string,horizental:boolean} [] | null
 }
 
 export interface feildsInterface{

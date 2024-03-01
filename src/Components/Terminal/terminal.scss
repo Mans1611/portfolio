@@ -1,0 +1,31 @@
+.terminal-view{
+    height: 100vh;
+    background-color: #054111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .terminal{
+        width:75%;
+        height: 80%;
+        border-radius: 20px;
+        background-color: #272727;
+        overflow: hidden;
+        padding: 10px;
+        border: none;
+        color: #ffffff;
+        font-size: 22px;
+        font-weight: 500;
+        &:focus{
+            outline: none;
+        }
+        .header{
+            background-color: #353535;
+            text-align: center;
+            font-size: 35px;
+            color: #ffffff;
+            font-weight: 600;
+            padding:5px;
+        }
+                
+    }
+}

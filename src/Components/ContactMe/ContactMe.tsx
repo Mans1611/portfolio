@@ -15,7 +15,7 @@ const ContactMe = () => {
             <img src={github} alt="GitHub" />
         </Link>
         <Link target='_blank' to='https://wa.link/bd1hmf'>
-            <img src={whats} alt="WhatsApp" />
+            <img style={{width:"55px" , height:"55px"}} src={whats} alt="WhatsApp" />
         </Link>
     </div>
   )

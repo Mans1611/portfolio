@@ -91,7 +91,7 @@ export const workingFields:feildsInterface[] = [
                 projectImg : portfolio,
                 description :"Design my personal portfolio with which holds my personal projects and experince in Design, Web Development and Data Science",
                 teamWork : false,
-                status : 'Done',
+                status : 'OnGoing',
                 images : [
 
                     {imgs:portdesign1,horizental:false},
@@ -198,7 +198,7 @@ export const workingFields:feildsInterface[] = [
                     {skillsName:"Node.JS",icon:node},
                     {skillsName:"TypeScript",icon:typescript},
                 ],
-                status : 'Done',
+                status : 'OnGoing',
                 projectImg : portfolio,
                 description :"My personal portfolio which display my personal projects and experince in both Web Developemnt and Data Science.",
                 teamWork : false,

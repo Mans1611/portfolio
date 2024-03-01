@@ -66,7 +66,7 @@
             z-index: 6;
             .project-status{
                 position: absolute;
-                top: 10px;
+                top: 50px;
                 right: 20px;
                 &.Done,&.OnGoing{
                     border-radius: 10px;
@@ -95,7 +95,7 @@
             }
             .title{
                 color: #e7e7e7;
-                font-size: 28px;
+                font-size: 24px;
                 text-align: center;
                 color:#FF8686;
                 margin: 10px auto;
@@ -104,6 +104,7 @@
                     font-size: 18px;
                     color: #ffffff;
                     padding: 5px 10px;
+                    text-align: center;
             }
             .skills-container{
                 display: flex;
@@ -119,7 +120,7 @@
                         object-fit: contain;
                     }
                     h6{
-                        font-size: 20px;
+                        font-size: 24px;
                         text-align: center;
                         color: #ffffff;
                     }

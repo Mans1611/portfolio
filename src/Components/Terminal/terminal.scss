@@ -1,13 +1,46 @@
+@import '../../mainstyle.scss';
 .terminal-view{
     height: 100vh;
-    background-color: #054111;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: #171717;
+    @include centerChild;
+    flex-direction: column;
+    .upper{
+        @include centerChild;
+        background-color: #575757;
+        padding: 3px;
+        width: 75%;
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+        color: #ffffff;
+        font-size: 22px;
+        font-weight: 700;
+        position: relative;
+        img{
+            width: 40px;
+        }
+        .apple-btns{
+            position: absolute;
+            right: 10px;
+            display: flex;
+            .circle{
+                width: 15px;
+                height: 15px;
+                margin: 0 2px;
+                cursor: pointer;
+                transition: all 200ms;
+                border-radius: 50%;
+                &:hover{
+                    opacity: 0.85;
+                }
+            }
+            
+        }
+    }
     .terminal{
         width:75%;
         height: 80%;
-        border-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
         background-color: #272727;
         overflow: hidden;
         padding: 10px;

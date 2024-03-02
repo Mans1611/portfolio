@@ -2,3 +2,9 @@ $dark-blue: #011520;
 $green: #31BF70;
 $white: #F2F2F2;
 
+@mixin centerChild{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

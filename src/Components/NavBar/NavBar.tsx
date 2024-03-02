@@ -4,8 +4,6 @@ import { Link, Outlet } from 'react-router-dom'
 import {Menu} from '@mui/icons-material';
 import SideBar from '../SideBar/SideBar';
 import { appContext } from '../../App';
-import LightModeIcon from '@mui/icons-material/LightMode';
-import NightlightIcon from '@mui/icons-material/Nightlight';
 import manslogo from '../../assets/Manslogo.png'
 
 const NavBar = () => {

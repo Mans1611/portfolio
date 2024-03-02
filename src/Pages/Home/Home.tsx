@@ -5,8 +5,6 @@ import Mans from '../../assets/mans.jpg';
 import { appContext } from '../../App';
 import NumberedInfo from '../../Components/NumberedInfo/NumberedInfo';
 import SkillsSection from '../../Components/Skill/SkillsSection';
-import Step from '../../Components/Step/Step';
-import { steps } from '../../data/step';
 import { Link } from 'react-router-dom';
 import ContactMe from '../../Components/ContactMe/ContactMe';
 import TimeLine from '../../Components/TimeLine/TimeLine';

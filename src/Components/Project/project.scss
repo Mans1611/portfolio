@@ -1,10 +1,22 @@
 .project-holder{
-    height: 300px;
+    height: 270px;
     border-radius:10px;
     background-color: #011520;
     overflow: hidden;
     position: relative;
+    transition: all 200ms;
+    cursor: pointer;
+    &:hover{
+        .img-wrapper{
+            height:40%;     
+            .project-img{
+                opacity: 0.75;
+            }
+        }
+        
+    }
     .img-wrapper{
+        transition: all 200ms;
         height:50%;
         overflow: hidden;
         .project-img{

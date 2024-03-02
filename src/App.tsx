@@ -8,6 +8,8 @@ import ProjectPopUp from './Components/ProjectPopUp/ProjectPopUp';
 import { projectInterface } from './data/projectList';
 import About from './Pages/About/About';
 import Footer from './Components/Footer/Footer';
+import { Helmet } from 'react-helmet';
+import manslogo from './assets/Manslogo.png'
 
 export interface props {
   dark : boolean | string| null,
@@ -57,7 +59,9 @@ function App() {
         timeSpent,setTimeSpent,
         innerWidth
       }}>
-        
+        <Helmet>
+          <link rel="icon" type="image/x-icon" href={'./assets/Manslogo.png'} />
+        </Helmet>       
         <div id='app' className="App">
           <Routes>
           <Route path="/" element={<><NavBar/> <Footer/></>}>
